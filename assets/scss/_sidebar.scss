@@ -1,0 +1,206 @@
+/*---- 17. Sidebar style  ------*/
+
+.sidebar-style {
+    @media #{$lg-layout}{
+        &.mr-30 {
+            margin-right: 0;
+        }
+    }
+    @media #{$md-layout, $xs-layout}{
+        &.mr-30 {
+            margin-right: 0;
+        }
+        margin-top: 30px;
+    }
+    @media #{$lg-layout}{
+        &.ml-30 {
+            margin-left: 0;
+        }
+    }
+    @media #{$md-layout, $xs-layout}{
+        &.ml-30 {
+            margin-left: 0;
+        }
+        margin-top: 55px;
+    }
+}
+
+.sidebar-widget {
+    h4.pro-sidebar-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: $dark;
+        margin: 0;
+    }
+    .sidebar-widget-list {
+        .sidebar-widget-list-left {
+            display: flex;
+            position: relative;
+            align-items: center;
+            margin-bottom: 15px;
+            a {
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                padding-left: 30px;
+                text-transform: capitalize;
+                margin-left: 0;
+                justify-content: space-between;
+                &:hover,
+                &.nuxt-link-exact-active {
+                    .check-mark {
+                        border-color: $theme-color;
+                        background-color: $theme-color;
+                    }
+                }
+            }
+            .check-mark {
+                position: absolute;
+                left: 0;
+                width: 15px;
+                height: 15px;
+                border: 2px solid #888;
+                border-radius: 3px;
+                background-color: #fff;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: 2px;
+                    left: 2px;
+                    width: 5px;
+                    height: 8px;
+                    transform: rotate(45deg);
+                    border: solid #fff;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }     
+        
+        a {
+            margin-left: 30px;
+            display: block;
+            span {
+                color: #9a9a9a;
+                font-weight: 500;
+                background-color: #eeeeee;
+                width: 30px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                border-radius: 50px;
+                float: right;
+                transition: all .3s ease 0s;
+            }
+            &:hover span {
+                color: $white;
+                background-color: $theme-color;
+            }
+        }
+    }
+    .sidebar-widget-tag {
+        li {
+            display: inline-block;
+            margin: 0 10px 15px 0;
+            @media #{$lg-layout}{
+                margin: 0 5px 15px 0;
+            }
+            a {
+                color: #424242;
+                display: inline-block;
+                background-color: #f6f6f6;
+                padding: 9px 17px 12px;
+                text-transform: capitalize;
+                line-height: 1;
+                border-radius: 50px;
+                @media #{$lg-layout}{
+                    padding: 9px 13px 12px;
+                }
+                &:hover,
+                &.nuxt-link-exact-active {
+                    background-color: $theme-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.pro-sidebar-search {
+    .pro-sidebar-search-form {
+        position: relative;
+        input {
+            background: transparent;
+            border: 1px solid #e6e6e6;
+            color: $black;
+            font-size: 14px;
+            height: 43px;
+            padding: 2px 55px 2px 18px;
+        }
+        button {
+            background: transparent;
+            border-color: #a1a5aa;
+            border-image: none;
+            border-style: none none none solid;
+            border-width: medium medium medium 1px;
+            padding: 0 15px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: $black;
+            transition: all .3s ease 0s;
+            font-size: 20px;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+.single-sidebar-blog {
+	border-bottom: 1px solid #dee0e4;
+	display: flex;
+	margin: 0 0 20px;
+	padding: 0 0 20px;
+    align-items: center;
+    &:last-child {
+        border-bottom: none;
+    }
+    .sidebar-blog-img {
+        flex: 0 0 70px;
+        margin: 0 20px 0 0;
+        @media #{$lg-layout} {
+            margin: 0 8px 0 0;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .sidebar-blog-content {
+        span {
+            color: $dark;
+            display: block;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 400;
+            line-height: 1;
+        }
+        h4 {
+            font-size: 14px;
+            margin-top: 5px;
+            line-height: 1.3;
+        }
+    }
+}
+
+.blog-sidebar {
+    @media #{$md-layout, $xs-layout}{
+        margin-top: 60px;
+    }
+}

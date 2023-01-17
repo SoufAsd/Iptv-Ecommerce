@@ -1,0 +1,172 @@
+
+/*------- 11. About style ------ */
+
+.welcome-content {
+    h5 {
+        font-weight: 500;
+        font-size: 16px;
+        color: #666;
+        margin: 0;
+        letter-spacing: .3px;
+    }
+    h1 {
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: .3px;
+        margin: 8px 0 30px;
+        color: #433f3f;
+        position: relative;
+        display: inline-block;
+        padding: 0 0 23px;
+        line-height: 1;
+        &:before {
+            position: absolute;
+            background-color: #070508;
+            height: 3px;
+            width: 70px;
+            content: "";
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0 auto;
+        }
+    }
+    p {
+        font-size: 16px;
+        color: #4b4b4b;
+        line-height: 30px;
+        width: 66%;
+        margin: 0 auto;
+        @media #{$lg-layout}{
+            width: 80%;
+        }
+        @media #{$md-layout}{
+            width: 95%;
+        }
+        @media #{$xs-layout}{
+            width: 100%;
+            font-size: 15px;
+        }
+    }
+}
+
+
+/* about page fun-fact*/
+.single-count {
+    .count-icon {
+        i {
+            font-size: 50px;
+            line-height: 1;
+            display: inline-block;
+            @media #{$md-layout, $xs-layout}{
+                font-size: 45px;
+            }
+        }
+    }
+    span {
+        color: $theme-color;
+        display: block;
+        line-height: 1;
+        font-size: 40px;
+        font-weight: bold;
+        margin: 25px 0 12px;
+        @media #{$md-layout}{
+            margin: 10px 0 8px;
+            font-size:35px;
+        }
+        @media #{$xs-layout}{
+            margin: 6px 0 8px;
+            font-size:35px;
+        }
+    }
+    .title {
+        color: $dark;
+        font-size: 20px;
+        text-transform: capitalize;
+        font-weight: 500;
+    }
+}
+
+// team member style css
+.team-wrapper {
+    background-color: #f7f7f7;
+    .team-img {
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .team-action {
+            background-color: rgba($white, 0.8);
+            left: 50%;
+            opacity: 0;
+            padding: 10px;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            top: 70%;
+            transform: translate(-50%, -50%);
+            transition: all 0.6s ease 0s;
+            width: 90%;
+            z-index: 5;
+            a {
+                border-radius: 50px;
+                color: $dark;
+                display: inline-block;
+                font-size: 14px;
+                height: 30px;
+                line-height: 28px;
+                text-align: center;
+                width: 30px;
+                margin: 0 3px;
+                border: 1px solid $dark;
+                &:hover {
+                    background-color: $theme-color;
+                    border-color: $theme-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .team-content {
+        padding: 20px 10px 23px;
+        h4 {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 0 3px;
+            text-transform: capitalize;
+        }
+        span {
+            font-size: 15px;
+            font-style: italic;
+        }
+    }
+    &:hover .team-action {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+.single-mission {
+    h3 {
+        font-size: 25px;
+        font-weight: 500;
+        margin: 0 0 20px;
+        text-transform: capitalize;
+        line-height: 22px;
+        color: $dark;
+        @media #{$xs-layout}{
+            margin: 0 0 10px;
+        }
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.about-brand-logo {
+    @media #{$xs-layout} {
+        &.pb-100 {
+            padding-bottom: 60px;
+        }
+    }
+}

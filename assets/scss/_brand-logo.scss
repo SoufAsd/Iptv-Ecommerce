@@ -1,0 +1,71 @@
+/*------- 14. Brand logo style  -------*/
+.single-brand-logo {
+    text-align: center;
+    img {
+        filter: grayscale(100%);
+        transition: all .5s ease 0s;
+    }
+    &:hover img {
+        filter: grayscale(0%);
+    }
+}
+.brand-logo-wrap {
+    padding: 100px 90px;
+    @media #{$xs-layout}{
+        padding: 50px 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

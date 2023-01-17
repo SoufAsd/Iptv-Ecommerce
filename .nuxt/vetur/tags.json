@@ -1,0 +1,185 @@
+{
+  "AboutMission": {
+    "description": "Auto imported from components/AboutMission.vue"
+  },
+  "BlogItem": {
+    "description": "Auto imported from components/BlogItem.vue"
+  },
+  "BlogItemStyleTwo": {
+    "description": "Auto imported from components/BlogItemStyleTwo.vue"
+  },
+  "BlogSidebar": {
+    "description": "Auto imported from components/BlogSidebar.vue"
+  },
+  "BlogWrapper": {
+    "description": "Auto imported from components/BlogWrapper.vue"
+  },
+  "BrandLogoCarousel": {
+    "description": "Auto imported from components/BrandLogoCarousel.vue"
+  },
+  "Breadcrumb": {
+    "description": "Auto imported from components/Breadcrumb.vue"
+  },
+  "ContactInfo": {
+    "description": "Auto imported from components/ContactInfo.vue"
+  },
+  "DealWithCountdown": {
+    "description": "Auto imported from components/DealWithCountdown.vue"
+  },
+  "FooterStyleTwo": {
+    "description": "Auto imported from components/FooterStyleTwo.vue"
+  },
+  "FunFact": {
+    "description": "Auto imported from components/FunFact.vue"
+  },
+  "HeaderLogoCenterWithTransparent": {
+    "description": "Auto imported from components/HeaderLogoCenterWithTransparent.vue"
+  },
+  "HeaderOffcanvasMenuWithTransparent": {
+    "description": "Auto imported from components/HeaderOffcanvasMenuWithTransparent.vue"
+  },
+  "HeaderWithTopbar": {
+    "description": "Auto imported from components/HeaderWithTopbar.vue"
+  },
+  "HomeSidebarMenu": {
+    "description": "Auto imported from components/HomeSidebarMenu.vue"
+  },
+  "InstagramPostWrapper": {
+    "description": "Auto imported from components/InstagramPostWrapper.vue"
+  },
+  "Login": {
+    "description": "Auto imported from components/Login.vue"
+  },
+  "MiniCart": {
+    "description": "Auto imported from components/MiniCart.vue"
+  },
+  "Navigation": {
+    "description": "Auto imported from components/Navigation.vue"
+  },
+  "NewsletterStyleOne": {
+    "description": "Auto imported from components/NewsletterStyleOne.vue"
+  },
+  "NewsletterStyleTwo": {
+    "description": "Auto imported from components/NewsletterStyleTwo.vue"
+  },
+  "OffCanvasMobileMenu": {
+    "description": "Auto imported from components/OffCanvasMobileMenu.vue"
+  },
+  "ProductDetailsDescriptionReview": {
+    "description": "Auto imported from components/ProductDetailsDescriptionReview.vue"
+  },
+  "QuickView": {
+    "description": "Auto imported from components/QuickView.vue"
+  },
+  "Register": {
+    "description": "Auto imported from components/Register.vue"
+  },
+  "ResponsiveMobileMenu": {
+    "description": "Auto imported from components/ResponsiveMobileMenu.vue"
+  },
+  "SectionTitleWithSubTitle": {
+    "description": "Auto imported from components/SectionTitleWithSubTitle.vue"
+  },
+  "ShopSidebar": {
+    "description": "Auto imported from components/ShopSidebar.vue"
+  },
+  "TeamMembers": {
+    "description": "Auto imported from components/TeamMembers.vue"
+  },
+  "TestimonialOne": {
+    "description": "Auto imported from components/TestimonialOne.vue"
+  },
+  "TheFooter": {
+    "description": "Auto imported from components/TheFooter.vue"
+  },
+  "TheHeader": {
+    "description": "Auto imported from components/TheHeader.vue"
+  },
+  "WelcomeMessage": {
+    "description": "Auto imported from components/WelcomeMessage.vue"
+  },
+  "BannerItem": {
+    "description": "Auto imported from components/banner/BannerItem.vue"
+  },
+  "BannerStyleFour": {
+    "description": "Auto imported from components/banner/BannerStyleFour.vue"
+  },
+  "BannerStyleOne": {
+    "description": "Auto imported from components/banner/BannerStyleOne.vue"
+  },
+  "BannerStyleThree": {
+    "description": "Auto imported from components/banner/BannerStyleThree.vue"
+  },
+  "BannerStyleTwo": {
+    "description": "Auto imported from components/banner/BannerStyleTwo.vue"
+  },
+  "HeroSlider": {
+    "description": "Auto imported from components/hero/HeroSlider.vue"
+  },
+  "HeroSliderCosmetics": {
+    "description": "Auto imported from components/hero/HeroSliderCosmetics.vue"
+  },
+  "HeroSliderFive": {
+    "description": "Auto imported from components/hero/HeroSliderFive.vue"
+  },
+  "HeroSliderFour": {
+    "description": "Auto imported from components/hero/HeroSliderFour.vue"
+  },
+  "HeroSliderSeven": {
+    "description": "Auto imported from components/hero/HeroSliderSeven.vue"
+  },
+  "HeroSliderSix": {
+    "description": "Auto imported from components/hero/HeroSliderSix.vue"
+  },
+  "HeroSliderThree": {
+    "description": "Auto imported from components/hero/HeroSliderThree.vue"
+  },
+  "HeroSliderTwo": {
+    "description": "Auto imported from components/hero/HeroSliderTwo.vue"
+  },
+  "PolicyServicePolicy": {
+    "description": "Auto imported from components/policy/ServicePolicy.vue"
+  },
+  "PolicyServicePolicyFour": {
+    "description": "Auto imported from components/policy/ServicePolicyFour.vue"
+  },
+  "PolicyServicePolicyThree": {
+    "description": "Auto imported from components/policy/ServicePolicyThree.vue"
+  },
+  "PolicyServicePolicyTwo": {
+    "description": "Auto imported from components/policy/ServicePolicyTwo.vue"
+  },
+  "ProductDetailsWrapper": {
+    "description": "Auto imported from components/product/ProductDetailsWrapper.vue"
+  },
+  "ProductGridItem": {
+    "description": "Auto imported from components/product/ProductGridItem.vue"
+  },
+  "ProductGridItemTwo": {
+    "description": "Auto imported from components/product/ProductGridItemTwo.vue"
+  },
+  "ProductGridStyleThree": {
+    "description": "Auto imported from components/product/ProductGridStyleThree.vue"
+  },
+  "ProductWrapper": {
+    "description": "Auto imported from components/product/ProductWrapper.vue"
+  },
+  "ProductWrapperCosmetics": {
+    "description": "Auto imported from components/product/ProductWrapperCosmetics.vue"
+  },
+  "ProductWrapperFive": {
+    "description": "Auto imported from components/product/ProductWrapperFive.vue"
+  },
+  "ProductWrapperFour": {
+    "description": "Auto imported from components/product/ProductWrapperFour.vue"
+  },
+  "ProductWrapperSeven": {
+    "description": "Auto imported from components/product/ProductWrapperSeven.vue"
+  },
+  "ProductWrapperThree": {
+    "description": "Auto imported from components/product/ProductWrapperThree.vue"
+  },
+  "ProductWrapperTwo": {
+    "description": "Auto imported from components/product/ProductWrapperTwo.vue"
+  }
+}

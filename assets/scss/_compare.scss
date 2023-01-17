@@ -1,0 +1,91 @@
+/*------ Start Compare Page Wrapper -----*/
+.compare-table {
+    & .table {
+        & tbody {
+            & tr {
+                & td {
+                    text-align: center;
+                    padding: 20px 20px;
+                    vertical-align: middle;
+                    border-color: #ccc;
+
+                    &.first-column {
+                        min-width: 175px;
+                        font-weight: 600;
+                        color: $black;
+                        margin: 0;
+
+                        @media #{$xs-layout} {
+                            min-width: 115px;
+                        }
+                    }
+
+                    &.product-image-title {
+                        min-width: 310px;
+                        vertical-align: bottom;
+
+                        @media #{$xs-layout} {
+                            min-width: 220px;
+                        }
+
+                        & .image {
+                            width: 100%;
+                            display: block;
+                        }
+
+                        & .title {
+                            color: $black;
+                            display: block;
+                            margin-top: 20px;
+                            &:hover {
+                                color: $theme-color;
+                            }
+                        }
+                    }
+
+                    &.pro-remove {
+                        & button {
+
+                            &:hover {
+                                color: $red;
+                            }
+
+                            & i {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+
+                    &.pro-ratting {
+                        & i {
+                            color: #ffa900;
+                        }
+                    }
+
+                    &.pro-price {
+                        del {
+                            color: #8e8e8e;
+                        }
+                    }
+
+                    button {
+                        &.btn {
+                            background-color: $theme-color;
+                            border-radius: 50px;
+                            color: $white;
+                            font-size: 13px;
+                            font-weight: 500;
+                            line-height: 1;
+                            padding: 10px 15px;
+                            text-transform: uppercase;
+                            &:hover {
+                                background-color: $black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*------ end Compare Page Wrapper -----*/

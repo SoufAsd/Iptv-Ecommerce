@@ -1,0 +1,219 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\about.vue",
+    "chunkName": "pages/about",
+    "_name": "_24631ac1"
+  },
+  {
+    "name": "blog",
+    "path": "/blog",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\blog\\\\index.vue",
+    "chunkName": "pages/blog/index",
+    "_name": "_21cd2c24"
+  },
+  {
+    "name": "cart",
+    "path": "/cart",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\cart.vue",
+    "chunkName": "pages/cart",
+    "_name": "_77aff71c"
+  },
+  {
+    "name": "checkout",
+    "path": "/checkout",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\checkout.vue",
+    "chunkName": "pages/checkout",
+    "_name": "_78b0177c"
+  },
+  {
+    "name": "compare",
+    "path": "/compare",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\compare.vue",
+    "chunkName": "pages/compare",
+    "_name": "_7f807119"
+  },
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_caf77a58"
+  },
+  {
+    "name": "home-cosmetics",
+    "path": "/home-cosmetics",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\home-cosmetics.vue",
+    "chunkName": "pages/home-cosmetics",
+    "_name": "_749df7dc"
+  },
+  {
+    "name": "home-fashion-five",
+    "path": "/home-fashion-five",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\home-fashion-five.vue",
+    "chunkName": "pages/home-fashion-five",
+    "_name": "_43a5e909"
+  },
+  {
+    "name": "home-fashion-four",
+    "path": "/home-fashion-four",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\home-fashion-four.vue",
+    "chunkName": "pages/home-fashion-four",
+    "_name": "_ffe4b506"
+  },
+  {
+    "name": "home-fashion-seven",
+    "path": "/home-fashion-seven",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\home-fashion-seven.vue",
+    "chunkName": "pages/home-fashion-seven",
+    "_name": "_1c715346"
+  },
+  {
+    "name": "home-fashion-six",
+    "path": "/home-fashion-six",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\home-fashion-six.vue",
+    "chunkName": "pages/home-fashion-six",
+    "_name": "_cdc49c4a"
+  },
+  {
+    "name": "home-fashion-three",
+    "path": "/home-fashion-three",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\home-fashion-three.vue",
+    "chunkName": "pages/home-fashion-three",
+    "_name": "_14418857"
+  },
+  {
+    "name": "home-fashion-two",
+    "path": "/home-fashion-two",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\home-fashion-two.vue",
+    "chunkName": "pages/home-fashion-two",
+    "_name": "_352e1b76"
+  },
+  {
+    "name": "login-register",
+    "path": "/login-register",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\login-register.vue",
+    "chunkName": "pages/login-register",
+    "_name": "_6af30c03"
+  },
+  {
+    "name": "my-account",
+    "path": "/my-account",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\my-account.vue",
+    "chunkName": "pages/my-account",
+    "_name": "_3167cbf0"
+  },
+  {
+    "name": "privacy-policy",
+    "path": "/privacy-policy",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\privacy-policy.vue",
+    "chunkName": "pages/privacy-policy",
+    "_name": "_2dd09e93"
+  },
+  {
+    "name": "shop",
+    "path": "/shop",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\shop.vue",
+    "chunkName": "pages/shop",
+    "_name": "_62b77bf2"
+  },
+  {
+    "name": "shop-grid-full-width",
+    "path": "/shop-grid-full-width",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\shop-grid-full-width.vue",
+    "chunkName": "pages/shop-grid-full-width",
+    "_name": "_4d6e45d8"
+  },
+  {
+    "name": "shop-grid-no-sidebar",
+    "path": "/shop-grid-no-sidebar",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\shop-grid-no-sidebar.vue",
+    "chunkName": "pages/shop-grid-no-sidebar",
+    "_name": "_d4bfb148"
+  },
+  {
+    "name": "shop-grid-right-sidebar",
+    "path": "/shop-grid-right-sidebar",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\shop-grid-right-sidebar.vue",
+    "chunkName": "pages/shop-grid-right-sidebar",
+    "_name": "_34b463cf"
+  },
+  {
+    "name": "shop-grid-two-column",
+    "path": "/shop-grid-two-column",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\shop-grid-two-column.vue",
+    "chunkName": "pages/shop-grid-two-column",
+    "_name": "_17e75e83"
+  },
+  {
+    "name": "shop-list-full-width",
+    "path": "/shop-list-full-width",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\shop-list-full-width.vue",
+    "chunkName": "pages/shop-list-full-width",
+    "_name": "_343c5cbc"
+  },
+  {
+    "name": "shop-list-standard",
+    "path": "/shop-list-standard",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\shop-list-standard.vue",
+    "chunkName": "pages/shop-list-standard",
+    "_name": "_7e6732f1"
+  },
+  {
+    "name": "terms-conditions",
+    "path": "/terms-conditions",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\terms-conditions.vue",
+    "chunkName": "pages/terms-conditions",
+    "_name": "_10ef75ba"
+  },
+  {
+    "name": "wishlist",
+    "path": "/wishlist",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\wishlist.vue",
+    "chunkName": "pages/wishlist",
+    "_name": "_5ada0541"
+  },
+  {
+    "name": "blog-blog-right-sidebar",
+    "path": "/blog/blog-right-sidebar",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\blog\\\\blog-right-sidebar.vue",
+    "chunkName": "pages/blog/blog-right-sidebar",
+    "_name": "_103958de"
+  },
+  {
+    "name": "blog-blog-without-sidebar",
+    "path": "/blog/blog-without-sidebar",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\blog\\\\blog-without-sidebar.vue",
+    "chunkName": "pages/blog/blog-without-sidebar",
+    "_name": "_45179aca"
+  },
+  {
+    "name": "product-product-affiliate",
+    "path": "/product/product-affiliate",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\product\\\\product-affiliate.vue",
+    "chunkName": "pages/product/product-affiliate",
+    "_name": "_43602bc8"
+  },
+  {
+    "name": "blog-slug",
+    "path": "/blog/:slug",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\blog\\\\_slug.vue",
+    "chunkName": "pages/blog/_slug",
+    "_name": "_20168adc"
+  },
+  {
+    "name": "product-slug",
+    "path": "/product/:slug?",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\product\\\\_slug.vue",
+    "chunkName": "pages/product/_slug",
+    "_name": "_343769b7"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\flonevuejs-101\\\\flone\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_441af586"
+  }
+]
