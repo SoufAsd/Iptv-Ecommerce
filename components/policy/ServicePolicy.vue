@@ -1,8 +1,8 @@
 <template>
     <div class="support-area pt-100 pb-90">
         <div class="container">
-            <div class="row mtn-30">
-                <div class="col-lg-3 col-sm-6 mt-30" v-for="(policy, index) in policies" :key="index">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mt-30" v-for="(policy, index) in policies" :key="index">
                     <div class="support-wrap support-1">
                         <div class="support-icon">
                             <img class="animated" :src="policy.icon" :alt="policy.title">
@@ -35,13 +35,8 @@
                     },
                     {
                         icon: "/img/icon-img/support-3.png",
-                        title: "Money Return",
-                        subTitle: "30 days for free return"
-                    },
-                    {
-                        icon: "/img/icon-img/support-4.png",
-                        title: "Order Discount",
-                        subTitle: "10% off on your first order"
+                        title: "Encrypted",
+                        subTitle: "Secure payments"
                     },
                 ]
             }

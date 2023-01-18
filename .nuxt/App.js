@@ -6,7 +6,57 @@ import NuxtError from '..\\layouts\\error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import '..\\assets\\scss\\style.scss'
+import '..\\assets\\scss\\bootstrap.scss'
+
+import '..\\assets\\scss\\_common.scss'
+
+import '..\\assets\\scss\\_header.scss'
+
+import '..\\assets\\scss\\_slider.scss'
+
+import '..\\assets\\scss\\_support.scss'
+
+import '..\\assets\\scss\\_section-title.scss'
+
+import '..\\assets\\scss\\_product.scss'
+
+import '..\\assets\\scss\\_footer.scss'
+
+import '..\\assets\\scss\\_suscribe.scss'
+
+import '..\\assets\\scss\\_about.scss'
+
+import '..\\assets\\scss\\_instagram.scss'
+
+import '..\\assets\\scss\\_testimonial.scss'
+
+import '..\\assets\\scss\\_brand-logo.scss'
+
+import '..\\assets\\scss\\_timers.scss'
+
+import '..\\assets\\scss\\_breadcrumb.scss'
+
+import '..\\assets\\scss\\_sidebar.scss'
+
+import '..\\assets\\scss\\_shop.scss'
+
+import '..\\assets\\scss\\_product-details.scss'
+
+import '..\\assets\\scss\\_cart.scss'
+
+import '..\\assets\\scss\\_checkout.scss'
+
+import '..\\assets\\scss\\_compare.scss'
+
+import '..\\assets\\scss\\_contact.scss'
+
+import '..\\assets\\scss\\_login-register.scss'
+
+import '..\\assets\\scss\\_my-account.scss'
+
+import '..\\assets\\scss\\_sidebar-mobilemenu.scss'
+
+import '..\\assets\\scss\\_custom.scss'
 
 import '..\\assets\\css\\animation.css'
 
