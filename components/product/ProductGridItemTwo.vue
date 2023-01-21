@@ -1,13 +1,13 @@
 <template>
     <div class="product-wrap-2 mb-25">
         <div class="product-img">
-            <n-link :to="`/product/${slugify(product.title)}`">
-                <img class="default-img" :src="product.images[0]" :alt="product.title">
-                <img class="hover-img" :src="product.images[1]" :alt="product.title">
+            <n-link :to="`/product/${slugify(product.name)}`">
+                <img class="default-img" :src="product.image" :alt="product.name">
+                <img class="hover-img" :src="product.image" :alt="product.name">
             </n-link>
             <div class="product-badges">
-                <span class="product-label pink" v-if="product.new">New</span>
-                <span class="product-label purple" v-if="product.discount">-{{ product.discount }}%</span>
+                <span class="product-label pink" >New</span>
+                
             </div>
             <div class="product-action-2">
                 <button class="btn" title="Compare" @click="addToCompare(product)"> 
@@ -24,11 +24,11 @@
         <div class="product-content-2">
             <div class="title-price-wrap-2">
                 <h3>
-                    <n-link :to="`/product/${slugify(product.title)}`">{{ product.title }}</n-link>
+                    <n-link :to="`/product/${slugify(product.name)}`">{{ product.name }}</n-link>
                 </h3>
                 <div class="price-2">
                     <span>${{ discountedPrice(product).toFixed(2) }}</span>
-                    <span class="old" v-if="product.discount > 0">${{ product.price.toFixed(2) }}</span>
+                    <span class="old">${{ product.price.toFixed(2) }}</span>
                 </div>
             </div>
             <div class="pro-wishlist-2">
@@ -56,7 +56,7 @@
             },
 
             discountedPrice(product) {
-                return product.price - (product.price * product.discount / 100)
+                return product.price 
             },
 
             addToWishlist(product) {

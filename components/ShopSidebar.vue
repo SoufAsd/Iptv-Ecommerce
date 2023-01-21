@@ -14,56 +14,67 @@
 
         <!-- category widget  -->
         <div class="sidebar-widget">
-            <h4 class="pro-sidebar-title">Categories</h4>
+            <h4 class="pro-sidebar-title">Abonnement</h4>
             <ul class="sidebar-widget-list mt-20">
-                <li class="sidebar-widget-list-left" v-for="(category, index) in categoryList" :key="index">
-                    <n-link :to="`?category=${slugify(category)}`">
+                <li class="sidebar-widget-list-left" >
+                    <n-link :to="`?category=${slugify('24 Mois')}`">
                         <span class="check-mark"></span>
-                        {{ category }}
+                        24 Mois
                     </n-link>
                 </li>
+                <li class="sidebar-widget-list-left">
+                    <n-link :to="`?category=${slugify('12 Mois')}`">
+                        <span class="check-mark"></span>
+                        12 Mois
+                    </n-link>
+                </li>
+                <li class="sidebar-widget-list-left">
+                    <n-link :to="`?category=${slugify('6 Mois')}`">
+                        <span class="check-mark"></span>
+                        6 Mois
+                    </n-link>
+                </li>
+                <li class="sidebar-widget-list-left">
+                    <n-link :to="`?category=${slugify('1 ans')}`">
+                        <span class="check-mark"></span>
+                        1 ans
+                    </n-link>
+                </li> 
             </ul>
         </div>
 
         <!-- color widget  -->
         <div class="sidebar-widget mt-50">
-            <h4 class="pro-sidebar-title">Colour</h4>
+            <h4 class="pro-sidebar-title">Comptabilité </h4>
             <ul class="sidebar-widget-list mt-20">
-                <li class="sidebar-widget-list-left" v-for="(color, index) in colorList" :key="index" >
-                    <n-link :to="`?color=${slugify(color)}`">
+                <li class="sidebar-widget-list-left" >
+                    <n-link :to="`?color=${slugify('Box Android')}`">
                         <span class="check-mark"></span>
-                        {{ color }}
+                        Box Android
+                    </n-link>
+                </li>
+                <li class="sidebar-widget-list-left" >
+                    <n-link :to="`?color=${slugify('iPhone')}`">
+                        <span class="check-mark"></span>
+                        iPhone
+                    </n-link>
+                </li>
+                <li class="sidebar-widget-list-left" >
+                    <n-link :to="`?color=${slugify('PC / MAC')}`">
+                        <span class="check-mark"></span>
+                        PC / MAC
+                    </n-link>
+                </li>
+                <li class="sidebar-widget-list-left" >
+                    <n-link :to="`?color=${slugify('Smartphone Android')}`">
+                        <span class="check-mark"></span>
+                        Smartphone Android
                     </n-link>
                 </li>
             </ul>
         </div>
 
-        <!-- size widget  -->
-        <div class="sidebar-widget mt-50">
-            <h4 class="pro-sidebar-title">Sizes</h4>
-            <ul class="sidebar-widget-list mt-20">
-                <li class="sidebar-widget-list-left" v-for="(size, index) in sizeList" :key="index" >
-                    <n-link :to="`?size=${slugify(size)}`">
-                        <span class="check-mark"></span>
-                        {{ size }}
-                    </n-link>
-                </li>
-            </ul>
-        </div>
-
-        <!-- tag widget  -->
-        <div class="sidebar-widget sidebar-widget__tag mt-60">
-            <h4 class="pro-sidebar-title">Tags</h4>
-            <div class="sidebar-widget-tag mt-30">
-                <ul>
-                    <li v-for="(tag, index) in tagList" :key="index">
-                        <n-link :to="`?tag=${slugify(tag)}`">
-                            {{ tag }}
-                        </n-link>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  
     </div>
 </template>
 

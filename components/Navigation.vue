@@ -1,10 +1,10 @@
 <template>
     <ul>
         <li>
-            <n-link to="/">Home </n-link>
+            <n-link to="/">Accueil </n-link>
         </li>
         <li>
-            <n-link to="/shop"> Shop </n-link>
+            <n-link to="/pack"> Nos Abonnements </n-link>
         </li>
         <li>
             <n-link to=""> About </n-link>

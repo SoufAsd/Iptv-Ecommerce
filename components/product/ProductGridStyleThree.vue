@@ -2,22 +2,22 @@
     <div class="product-wrap-3 mb-20">
         <div class="product-img">
             <n-link :to="`/product/${slugify(product.title)}`">
-                <img class="default-img" :src="product.images[0]" :alt="product.title">
+                <img class="default-img" :src="product.image" :alt="product.name">
             </n-link>
             <div class="product-badges">
-                <span class="product-label pink" v-if="product.new">New</span>
-                <span class="product-label purple" v-if="product.discount">-{{ product.discount }}%</span>
+                <span class="product-label pink" >New</span>
+                
             </div>
             <div class="product-content-3-wrap">
                 <div class="product-content-3">
                     <div class="product-title">
                         <h3>
-                            <n-link :to="`/product/${slugify(product.title)}`">{{ product.title }}</n-link>
+                            <n-link :to="`/product/${slugify(product.name)}`">{{ product.name }}</n-link>
                         </h3>
                     </div>
                     <div class="price-3">
                         <span>${{ discountedPrice(product).toFixed(2) }}</span>
-                        <span class="old" v-if="product.discount > 0">${{ product.price.toFixed(2) }}</span>
+                        <span class="old">${{ product.price.toFixed(2) }}</span>
                     </div>
                     <div class="product-action-3">
                         <button class="btn" title="Compare" @click="addToCompare(product)"> 
@@ -57,7 +57,7 @@
             },
 
             discountedPrice(product) {
-                return product.price - (product.price * product.discount / 100)
+                return product.price 
             },
 
             addToWishlist(product) {
