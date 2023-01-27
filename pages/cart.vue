@@ -6,7 +6,7 @@
         <div class="cart-main-area pt-90 pb-100">
             <div class="container">
                 <div class="row">
-                    <div class="col-12" v-if="products.length > 0">
+                    <div class="col-12" v-if="products">
                         <h3 class="cart-page-title">Your cart items</h3>
                         <div class="table-content table-responsive cart-table-content">
                             <table>
@@ -21,29 +21,29 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="(product, index) in products" :key="index">
+                                    <tr v-for="(pack, index) in products" :key="index">
                                         <td class="product-thumbnail">
-                                            <n-link :to="`/product/${slugify(product.title)}`">
-                                                <img :src="product.images[0]" :alt="product.title">
+                                            <n-link :to="`/product/${slugify(pack.name)}`">
+                                                <img :src="baseURL+pack.image" :alt="pack.title">
                                             </n-link>
                                         </td>
                                         <td class="product-name">
-                                            <n-link :to="`/product/${slugify(product.title)}`">{{ product.title }}</n-link>
+                                            <n-link :to="`/product/${slugify(pack.name)}`">{{ pack.name }}</n-link>
                                         </td>
                                         <td class="product-price-cart">
-                                            <span class="amount">${{ discountedPrice(product).toFixed(2) }}</span>
-                                            <del class="old">${{ product.price.toFixed(2) }}</del>
+                                            <span class="amount">${{ pack.price.toFixed(2) }}</span>
+                                            <del class="old">${{ pack.price.toFixed(2) }}</del>
                                         </td>
                                         <td class="product-quantity">
                                             <div class="cart-plus-minus">
-                                                <button @click="decrementProduct(product)" class="dec qtybutton">-</button>
-                                                <input class="cart-plus-minus-box" type="text" :value="product.cartQuantity" readonly>
-                                                <button @click="incrementProduct(product)" class="inc qtybutton">+</button>
+                                                <button @click="decrementProduct(pack)" class="dec qtybutton">-</button>
+                                                <input class="cart-plus-minus-box" type="text" :value="pack.cartQuantity" readonly>
+                                                <button @click="incrementProduct(pack)" class="inc qtybutton">+</button>
                                             </div>
                                         </td>
-                                        <td class="product-subtotal">${{ product.total.toFixed(2) }}</td>
+                                        <td class="product-subtotal">${{ pack.total.toFixed(2) }}</td>
                                         <td class="product-remove">
-                                            <button @click="removeProduct(product)"><i class="fa fa-times"></i></button>
+                                            <button @click="removeProduct(pack)"><i class="fa fa-times"></i></button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -62,64 +62,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="cart-tax">
-                                    <div class="title-wrap">
-                                        <h4 class="cart-bottom-title section-bg-gray">Estimate Shipping And Tax</h4>
-                                    </div>
-                                    <div class="tax-wrapper">
-                                        <p>Enter your destination to get a shipping estimate.</p>
-                                        <div class="tax-select-wrapper">
-                                            <div class="tax-select">
-                                                <label>
-                                                    * Country
-                                                </label>
-                                                <select class="email s-email s-wid">
-                                                    <option>Bangladesh</option>
-                                                    <option>Albania</option>
-                                                    <option>Aland Islands</option>
-                                                    <option>Afghanistan</option>
-                                                    <option>Belgium</option>
-                                                </select>
-                                            </div>
-                                            <div class="tax-select">
-                                                <label>
-                                                    * Region / State
-                                                </label>
-                                                <select class="email s-email s-wid">
-                                                    <option>Bangladesh</option>
-                                                    <option>Albania</option>
-                                                    <option>Aland Islands</option>
-                                                    <option>Afghanistan</option>
-                                                    <option>Belgium</option>
-                                                </select>
-                                            </div>
-                                            <div class="tax-select">
-                                                <label>
-                                                    * Zip/Postal Code
-                                                </label>
-                                                <input type="text">
-                                            </div>
-                                            <button class="cart-btn-2" type="submit">Get A Quote</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="discount-code-wrapper">
-                                    <div class="title-wrap">
-                                    <h4 class="cart-bottom-title section-bg-gray">Use Coupon Code</h4> 
-                                    </div>
-                                    <div class="discount-code">
-                                        <p>Enter your coupon code if you have one.</p>
-                                        <form>
-                                            <input type="text" required="" name="name">
-                                            <button class="cart-btn-2" type="submit">Apply Coupon</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-12">
+                            <div class="col-lg-12 col-md-12">
                                 <div class="grand-total">
                                     <div class="title-wrap">
                                         <h4 class="cart-bottom-title section-bg-gary-cart">Cart Total</h4>
@@ -156,6 +99,7 @@
         },
         data() {
             return {
+                baseURL:'http://127.0.0.1:8000',
                 singleQuantity: 1
             }
         },
@@ -173,7 +117,8 @@
         methods: {
             incrementProduct(product) {
                 const prod = { ...product, cartQuantity: 1 }
-                if (product.cartQuantity < product.quantity) {
+                
+                if (product.cartQuantity) {
                     this.$store.dispatch('addToCartItem', prod)
                 }
             },

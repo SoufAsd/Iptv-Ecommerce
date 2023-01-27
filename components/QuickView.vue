@@ -6,18 +6,12 @@
                     <div class="product-details-slider">
                         <div class="product-details-img">
                             <div class="product-badges">
-                                <span class="product-label pink" v-if="product.new">New</span>
-                                <span class="product-label purple" v-if="product.discount">-{{ product.discount }}%</span>
+                                <span class="product-label pink" >New</span>
+                                <span class="product-label purple" >-25%</span>
                             </div>
                             <swiper :options="swiperOptionTop">
-                                <div class="large-img swiper-slide" v-for="(image, index) in product.images" :key="index">
-                                    <img class="img-fluid" :src="image" :alt="product.title">
-                                </div>
-                                <div class="quickview-nav swiper-button-prev">
-                                    <i class="pe-7s-angle-left"></i>
-                                </div>
-                                <div class="quickview-nav swiper-button-next">
-                                    <i class="pe-7s-angle-right"></i>
+                                <div class="large-img swiper-slide" >
+                                    <img class="img-fluid" :src="baseURL+product.image" :alt="product.name">
                                 </div>
                             </swiper>
                         </div>
@@ -31,70 +25,22 @@
                                 <i class="fa fa-times"></i>
                             </button>
                         </div>
-                        <h2>{{ product.title }}</h2>
+                        <h2>{{ product.name }}</h2>
                         <div class="product-details-price">
-                            <span>${{ discountedPrice(product).toFixed(2) }}</span>
-                            <span class="old" v-if="product.discount > 0">${{ product.price.toFixed(2) }}</span>
+                            <span>€{{ product.price }}</span>
                         </div>
                         <div class="pro-details-rating-wrap">
-                            <div class="pro-details-rating" v-if="product.rating == 5">
+                            <div class="pro-details-rating" >
                                 <i class="fa fa-star-o yellow"></i>
                                 <i class="fa fa-star-o yellow"></i>
                                 <i class="fa fa-star-o yellow"></i>
                                 <i class="fa fa-star-o yellow"></i>
                                 <i class="fa fa-star-o yellow"></i>
                             </div>
-                            <div class="pro-details-rating" v-if="product.rating == 4">
-                                <i class="fa fa-star-o yellow"></i>
-                                <i class="fa fa-star-o yellow"></i>
-                                <i class="fa fa-star-o yellow"></i>
-                                <i class="fa fa-star-o yellow"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <div class="pro-details-rating" v-if="product.rating == 3">
-                                <i class="fa fa-star-o yellow"></i>
-                                <i class="fa fa-star-o yellow"></i>
-                                <i class="fa fa-star-o yellow"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <div class="pro-details-rating" v-if="product.rating == 2">
-                                <i class="fa fa-star-o yellow"></i>
-                                <i class="fa fa-star-o yellow"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <div class="pro-details-rating" v-if="product.rating == 1">
-                                <i class="fa fa-star-o yellow"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <span><a href="#">{{ product.rating }} Reviews</a></span>
+                           
                         </div>
                         <p>{{ product.description }}</p>
-                        <div class="pro-details-size-color" v-if="product.variation">
-                            <div class="pro-details-color-wrap">
-                                <h6 class="label">Color</h6>
-                                <div class="pro-details-color-content">
-                                    <label :class="item" class="radio" v-for="(item, index) in product.variation.color" :key="index" >
-                                        <input type="radio" name="colorGroup"/>
-                                        <span class="check-mark"></span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="pro-details-size-wrap">
-                                <h6 class="label">Size</h6>
-                                <div class="pro-details-size-content">
-                                    <label class="radio" v-for="(item, index) in product.variation.sizes" :key="index">
-                                        <input type="radio" name="sizeGroup" />
-                                        <span class="check-mark">{{ item }}</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                     
                         <div class="pro-details-quality">
                             <div class="cart-plus-minus">
                                 <button @click="decreaseQuantity()" class="dec qtybutton">-</button>
@@ -104,28 +50,6 @@
                             <div class="pro-details-cart btn-hover">
                                 <button @click="addToCart(product)">Add To Cart</button>
                             </div>
-                            <div class="pro-details-wishlist">
-                                <button @click="addToWishlist(product)"><i class="fa fa-heart-o"></i></button>
-                            </div>
-                            <div class="pro-details-compare">
-                                <button @click="addToCompare(product)"><i class="pe-7s-shuffle"></i></button>
-                            </div>
-                        </div>
-                        <div class="pro-details-meta">
-                            <span class="label">Categories:</span>
-                            <ul>
-                                <li v-for="(category, index) in product.category" :key="index">
-                                    <n-link :to="`/shop?category=${category}`">{{ category }},</n-link>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pro-details-meta">
-                            <span class="label">Tag:</span>
-                            <ul>
-                                <li v-for="(tag, index) in product.tag" :key="index">
-                                    <n-link :to="`/shop?tag=${tag}`">{{ tag }},</n-link>
-                                </li>
-                            </ul>
                         </div>
                         <div class="pro-details-social">
                             <ul>
@@ -168,6 +92,7 @@
         data() {
             return {
                 item: '',
+                baseURL:'http://127.0.0.1:8000',
                 singleQuantity: 1,
 
                 swiperOptionTop: {
@@ -194,51 +119,31 @@
                 this.item = product
             },
 
-            addToCart(product) {
-                const prod = {...product, cartQuantity: this.singleQuantity}
+            addToCart(pack){          
+                const prod = {...pack, cartQuantity: this.singleQuantity}
                 // for notification
-                if (this.$store.state.cart.find(el => product.id === el.id)) {
+                if (this.$store.state.cart.find(el => pack.id === el.id)) {
                     this.$notify({ title: 'Already added to cart update with one' })
                 } else {
                     this.$notify({ title: 'Add to cart successfully!'})
                 }
-                
+
                 this.$store.dispatch('addToCartItem', prod)
             },
 
             discountedPrice(product) {
-                return product.price - (product.price * product.discount / 100)
+                return product.price
             },
 
             increaseQuantity(){
-                if(this.product.quantity > this.singleQuantity) this.singleQuantity++
+                 this.singleQuantity++
             },
 
             decreaseQuantity() {
                 if(this.singleQuantity > 1) this.singleQuantity--
             },
 
-            addToWishlist(product) {
-                // for notification
-                if (this.$store.state.wishlist.find(el => product.id === el.id)) {
-                    this.$notify({ title: 'Already added to wishlist!' })
-                } else {
-                    this.$notify({ title: 'Add to wishlist successfully!'})
-                }
-
-                this.$store.dispatch('addToWishlist', product)
-            },
-
-            addToCompare(product) {
-                // for notification
-                if (this.$store.state.compare.find(el => product.id === el.id)) {
-                    this.$notify({ title: 'Already added to compare!' })
-                } else {
-                    this.$notify({ title: 'Add to compare successfully!'})
-                }
-
-                this.$store.dispatch('addToCompare', product)
-            }
+          
         }
     };
 </script>

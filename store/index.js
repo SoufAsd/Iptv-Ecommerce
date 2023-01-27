@@ -4,11 +4,14 @@ import axios from "axios"
 import products from "../data/product.json";
 Vue.use(Vuex)
 axios.defaults.baseURL='http://127.0.0.1:8000/'
+ 
 export const state = () => ({
     products: products,
     cart: [],
     wishlist: [],
-    compare: []
+    compare: [],
+    pack:[],
+    selectedPack:{},
 })
 
 
@@ -57,11 +60,13 @@ export const getters = {
             return item.new
         })
     },
+
     getBestProducts: state => {
         return state.products.filter(item => {
             return item.best
         })
     },
+
     getSaleProducts: state => {
         return state.products.filter(item => {
             return item.discount
@@ -71,12 +76,15 @@ export const getters = {
     categoryList: state => {
         return ["all categories",...new Set(state.products.map((list) => list.category).flat())]
     },
+
     tagList: state => {
         return [...new Set(state.products.map((list) => list.tag).flat())]
     },
+
     sizeList: state => {
         return ["all sizes",...new Set(state.products.map((list) => list.variation?.sizes).flat())].filter(Boolean)
     },
+
     colorList: state => {
         return ["all colors",...new Set(state.products.map((list) => list.variation?.color).flat())].filter(Boolean)
     },
@@ -88,20 +96,32 @@ export const mutations = {
     SET_PRODUCT(state, product) {
         state.products = product
     },
-
+    updatePack(state,pack) {
+        return state.pack=pack
+    },
+    updateSelectedPack(state,pack) {
+        return state.selectedPack=pack
+    },
     UPDATE_CART(state, payload) {
         const item = state.cart.find(el => payload.id === el.id)
         if (item) {
-            const price = item.discount ? item.price - (item.price *(item.discount)/100) : item.price;
+            const price = item.price;
             item.cartQuantity = item.cartQuantity + payload.cartQuantity
             item.total = item.cartQuantity * price
         } else {
-            const price = payload.discount ? payload.price - (payload.price *(payload.discount)/100) : payload.price;
+            const price =  payload.price;
             state.cart.push({...payload, cartQuantity: payload.cartQuantity, total: price })
+            
+            localStorage.setItem("cart", JSON.stringify(state.cart))
         }
     },
-
+    localCart(state,cart){
+        return state.cart=cart
+    },
     REMOVE_PRODUCT_FROM_CART(state, product) {
+        const accounts = JSON.parse(localStorage.getItem('cart'));
+        const filtered = accounts.filter(item => item.id !== product.id);
+        localStorage.setItem('cart', JSON.stringify(filtered));
         state.cart = state.cart.filter(item => {
             return product.id !== item.id
         });
@@ -109,7 +129,7 @@ export const mutations = {
 
     DECREASE_PRODUCT(state, payload) {
         const found = state.cart.find(el => payload.id === el.id)
-        const price = found.discount ? found.price - (found.price *(found.discount)/100) : found.price;
+        const price = payload.price;
         found.cartQuantity = found.cartQuantity - payload.cartQuantity
         found.total = found.cartQuantity * price
     },
@@ -157,6 +177,7 @@ export const actions = {
     },
 
     removeProductFromCart({commit}, product) {
+        
         commit('REMOVE_PRODUCT_FROM_CART', product)
     },
 

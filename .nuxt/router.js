@@ -20,6 +20,8 @@ const _cb991a46 = () => interopDefault(import('..\\pages\\home-fashion-two.vue' 
 const _2114d29b = () => interopDefault(import('..\\pages\\login-register.vue' /* webpackChunkName: "pages/login-register" */))
 const _b86e26c0 = () => interopDefault(import('..\\pages\\my-account.vue' /* webpackChunkName: "pages/my-account" */))
 const _68dc5e2d = () => interopDefault(import('..\\pages\\pack.vue' /* webpackChunkName: "pages/pack" */))
+const _56c4223e = () => interopDefault(import('..\\pages\\packdetail.vue' /* webpackChunkName: "pages/packdetail" */))
+const _4a5d23ec = () => interopDefault(import('..\\pages\\packdetail\\_id.vue' /* webpackChunkName: "pages/packdetail/_id" */))
 const _381b35aa = () => interopDefault(import('..\\pages\\privacy-policy.vue' /* webpackChunkName: "pages/privacy-policy" */))
 const _278c208a = () => interopDefault(import('..\\pages\\shop.vue' /* webpackChunkName: "pages/shop" */))
 const _2d3151ac = () => interopDefault(import('..\\pages\\shop-grid-full-width.vue' /* webpackChunkName: "pages/shop-grid-full-width" */))
@@ -112,6 +114,15 @@ export const routerOptions = {
     path: "/pack",
     component: _68dc5e2d,
     name: "pack"
+  }, {
+    path: "/packdetail",
+    component: _56c4223e,
+    name: "packdetail",
+    children: [{
+      path: ":id?",
+      component: _4a5d23ec,
+      name: "packdetail-id"
+    }]
   }, {
     path: "/privacy-policy",
     component: _381b35aa,

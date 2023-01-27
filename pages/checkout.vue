@@ -8,86 +8,7 @@
             <div class="container">
                 <div class="row" v-if="products.length > 0">
                     <div class="col-lg-7">
-                        <div class="billing-info-wrap">
-                            <h3>Billing Details</h3>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="billing-info mb-20">
-                                        <label>First Name</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="billing-info mb-20">
-                                        <label>Last Name</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="billing-info mb-20">
-                                        <label>Company Name</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="billing-select mb-20">
-                                        <label>Country</label>
-                                        <select>
-                                            <option>Select a country</option>
-                                            <option>Azerbaijan</option>
-                                            <option>Bahamas</option>
-                                            <option>Bahrain</option>
-                                            <option>Bangladesh</option>
-                                            <option>Barbados</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="billing-info mb-20">
-                                        <label>Street Address</label>
-                                        <input class="billing-address" placeholder="House number and street name" type="text">
-                                        <input placeholder="Apartment, suite, unit etc." type="text">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="billing-info mb-20">
-                                        <label>Town / City</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="billing-info mb-20">
-                                        <label>State / County</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="billing-info mb-20">
-                                        <label>Postcode / ZIP</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="billing-info mb-20">
-                                        <label>Phone</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="billing-info mb-20">
-                                        <label>Email Address</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="additional-info-wrap">
-                                <h4>Additional information</h4>
-                                <div class="additional-info">
-                                    <label>Order notes</label>
-                                    <textarea placeholder="Notes about your order, e.g. special notes for delivery. " name="message"></textarea>
-                                </div>
-                            </div>
-                        </div>
+                        <div ref="paypal"></div>
                     </div>
                     <div class="col-lg-5">
                         <div class="your-order-area">
@@ -147,10 +68,56 @@
 
 <script>
     export default {
+        data(){
+            return{
+                product: {
+                    price: 777.77,
+                    description: "leg lamp from that one movie",
+                    img: "./assets/lamp.jpg"
+                }
+            }
+        },
         components: {
             HeaderWithTopbar: () => import("@/components/HeaderWithTopbar"),
             Breadcrumb: () => import("@/components/Breadcrumb"),
             TheFooter: () => import("@/components/TheFooter"),
+        },
+        mounted(){
+            const script = document.createElement("script");
+            script.src =
+            "https://www.paypal.com/sdk/js?client-id=AZw3UEPNNxZ_SQx66wIlaPQRKhoY_i-GS7pY0pJOSfhz1g992kwvCf3H-E22OXzMqOibFaj_AZ7PHkB8&disable-funding=card";
+            script.addEventListener("load", this.setLoaded);
+            document.body.appendChild(script);
+        },
+        methods:{
+            setLoaded: function() {
+                this.loaded = true;
+                window.paypal
+                    .Buttons({
+                    createOrder: (data, actions) => {
+                        return actions.order.create({
+                        purchase_units: [
+                            {
+                            description: this.product.description,
+                            amount: {
+                                currency_code: "USD",
+                                value: this.total
+                            }
+                            }
+                        ]
+                        });
+                    },
+                    onApprove: async (data, actions) => {
+                        const order = await actions.order.capture();
+                        this.paidFor = true;
+                        console.log(order);
+                    },
+                    onError: err => {
+                       
+                    }
+                    })
+                    .render(this.$refs.paypal);
+                }
         },
         computed: {
             products() {

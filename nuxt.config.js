@@ -7,12 +7,12 @@ export default {
     
     // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
-        title: 'Flone - VueJS eCommerce Template',
-        titleTemplate: 'Flone | %s',
+        title: 'Digital Land - Meilleur IPTV au France | Abonnement Koora IPTV France',
+        titleTemplate: 'Digital Land | Meilleur IPTV au France | Abonnement Koora IPTV France',
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: '' }
+            { hid: 'Digital Land : Meuble, Déco, High Tech, Bricolage, Jardin, Sport | Livraison gratuite à partir de 25€ | Paiement sécurisé | 4x possible | Retour simple et rapide | E-commerçant français, des produits et services au meilleur prix.', name: 'description', content: '' }
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -56,6 +56,8 @@ export default {
         '~/plugins/vue-awesome-swiper.js',
         '~/plugins/vuejs-pagiante.js',
         '~/plugins/observe-visibility.js',
+        { src: '~/plugins/paypal.client.js' },
+        { src:'~/plugins/checkcart.js', mode: 'client' },
         { 
             src: '~/plugins/bootstrap.js', 
             mode: 'client'
@@ -98,5 +100,6 @@ export default {
         babel: {
             compact: true,
         },
+        vendor: ['vue-paypal-checkout'],
     },
 }

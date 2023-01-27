@@ -1,43 +1,89 @@
 <template>
     <div class="product-area pb-90">
         <div class="container">
-            <SectionTitleWithSubTitle title="DAILY DEALS!" classes="section-title" v-if="isSectionTitle ? true : false" />
+            <SectionTitleWithSubTitle title=" NOS PACKS!" classes="section-title"  />
 
-            <ul class="nav product-tab-list pt-30 pb-55 justify-content-center">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#new-product" role="tab">New Arrivals</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#best-product" role="tab">Best Sellers</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#sale-product" role="tab">Sale Items</button>
-                </li>
-            </ul>
             <div class="tab-content">
-                <div class="tab-pane fade" id="new-product" role="tabpanel">
+                <div class="tab-pane fade show active"  role="tabpanel">
                     <div class="row">
-                        <div class="col-xl-3 col-lg-4 col-sm-6" v-for="(product, index) in newProducts.slice(0, 8)" :key="index">
-                            <ProductGridItem :product="product" :layout="layout" />
+                        <div class="col-xl-3 col-lg-4 col-sm-6" v-for="pack in $store.state.pack" :key="pack.id">
+                            <div class="product-wrap mb-30">
+                                        <div class="product-img" >
+                                            <nuxt-link :to="`/packdetail/${pack.id}` " >
+                                                <span @click="updateSelectedPack(pack)">
+                                                    <img class="default-img" :src="baseURL+pack.image" :alt="pack.name">
+                                                    <img class="hover-img" :src="baseURL+pack.image" :alt="pack.name">
+                                                </span>
+                                            </nuxt-link>
+                                            <div class="product-badges">
+                                                <span class="product-label pink" >New</span>
+                                                
+                                            </div>
+                                            <div class="product-action" >
+                                                <div class="pro-same-action pro-wishlist">
+                                                    <button class="btn" title="Wishlist" @click="addToWishlist(pack)"> 
+                                                        <i class="pe-7s-like"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="pro-same-action pro-cart">
+                                                    <button class="btn" title="Add To Cart" @click="addToCart(pack)">
+                                                        <i class="pe-7s-cart"></i> 
+                                                        Add to cart
+                                                    </button>
+                                                </div>
+                                                <div class="pro-same-action pro-quickview">
+                                                    <button class="btn" title="Quick View" @click="onClick(pack)">
+                                                        <i class="pe-7s-look"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-content text-center">
+                                            <h3>
+                                                <nuxt-link :to="`/packdetail/${pack.id}` " >
+                                                <span @click="updateSelectedPack(pack)">{{ pack.name }}
+                                                </span>
+                                                </nuxt-link>
+                                            </h3>
+                                            <div class="product-rating" >
+                                                <i class="fa fa-star-o yellow"></i>
+                                                <i class="fa fa-star-o yellow"></i>
+                                                <i class="fa fa-star-o yellow"></i>
+                                                <i class="fa fa-star-o yellow"></i>
+                                                <i class="fa fa-star-o yellow"></i>
+                                            </div>
+                                        
+                                            <div class="product-price">
+                                                <span>€{{ pack.price.toFixed(2) }}</span>
+                                            </div>
+                                             <div class="product-content__list-view" v-if="layout === 'list'">
+                                                <p>{{ pack.description }}</p>
+                                                <div class="pro-action d-flex align-items-center" >
+                                                    <div class="pro-cart btn-hover">
+                                                        <n-link :to="`/product/${slugify(pack.name)}`" class="btn" v-if="pack.variation">
+                                                            select option
+                                                        </n-link>
+                                                        <button class="btn" title="Add To Cart" @click="addToCart(pack)" v-else>
+                                                            <i class="pe-7s-cart"></i> 
+                                                            Add to cart
+                                                        </button>
+                                                    </div>
+                                                    <div class="pro-wishlist">
+                                                        <button @click="addToWishlist(pack)">
+                                                            <i class="fa fa-heart-o"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="pro-compare">
+                                                        <button @click="addToCompare(pack)">
+                                                            <i class="pe-7s-shuffle"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="tab-pane fade show active" id="best-product" role="tabpanel">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-4 col-sm-6" v-for="(product, index) in bestProducts.slice(0, 8)" :key="index">
-                            <ProductGridItem :product="product" :layout="layout" />
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="sale-product" role="tabpanel">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-4 col-sm-6" v-for="(product, index) in saleProducts.slice(0, 8)" :key="index">
-                            <ProductGridItem :product="product" :layout="layout" />
-                        </div>
-                    </div>
-                </div>
-                <div class="view-more text-center mt-20 toggle-btn2">
-                    <n-link to="/shop" class="loadMore2">VIEW MORE PRODUCTS</n-link>
                 </div>
             </div>
         </div>
@@ -47,28 +93,38 @@
 
 <script>
     export default {
-        props: ['isSectionTitle'],
-
-        components: {
-            ProductGridItem: () => import('@/components/product/ProductGridItem'),
-            QuickView: () => import('@/components/QuickView'),
-        },
-
-        computed: {
-            newProducts() {
-                return this.$store.getters.getNewProducts
-            },
-            bestProducts() {
-                return this.$store.getters.getBestProducts
-            },
-            saleProducts() {
-                return this.$store.getters.getSaleProducts
-            },
-        },
         data() {
             return {
-                layout: "twoColumn"
+                layout: "twoColumn",
+                baseURL:'http://127.0.0.1:8000',
             }
         },
-    };
+        fetch({$axios,store}){
+            return $axios.$get('api/get_all_pack_active')
+            .then (response =>{
+                console.log(response)
+              store.commit('updatePack',response.packs)
+            });
+        },
+        methods:{
+            slugify(text){
+                    return text;
+            },
+            addToCart(pack){          
+                const prod = {...pack, cartQuantity: 1}
+                // for notification
+                if (this.$store.state.cart.find(el => pack.id === el.id)) {
+                    this.$notify({ title: 'Already added to cart update with one' })
+                } else {
+                    this.$notify({ title: 'Add to cart successfully!'})
+                }
+
+                this.$store.dispatch('addToCartItem', prod)
+            },
+            onClick(pack) {
+                this.$modal.show('quickview', pack);
+            },
+        }
+        
+    }
 </script>

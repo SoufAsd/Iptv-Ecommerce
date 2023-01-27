@@ -44,6 +44,7 @@ You can directly use them in pages and other components without the need to impo
 - `<BannerStyleOne>` | `<banner-style-one>` (components/banner/BannerStyleOne.vue)
 - `<BannerStyleThree>` | `<banner-style-three>` (components/banner/BannerStyleThree.vue)
 - `<BannerStyleTwo>` | `<banner-style-two>` (components/banner/BannerStyleTwo.vue)
+- `<ChainnesChaineInfo>` | `<chainnes-chaine-info>` (components/chainnes/chaineInfo.vue)
 - `<HeroSlider>` | `<hero-slider>` (components/hero/HeroSlider.vue)
 - `<HeroSliderCosmetics>` | `<hero-slider-cosmetics>` (components/hero/HeroSliderCosmetics.vue)
 - `<HeroSliderFive>` | `<hero-slider-five>` (components/hero/HeroSliderFive.vue)

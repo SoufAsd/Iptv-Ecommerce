@@ -113,6 +113,9 @@
   "BannerStyleTwo": {
     "description": "Auto imported from components/banner/BannerStyleTwo.vue"
   },
+  "ChainnesChaineInfo": {
+    "description": "Auto imported from components/chainnes/chaineInfo.vue"
+  },
   "HeroSlider": {
     "description": "Auto imported from components/hero/HeroSlider.vue"
   },

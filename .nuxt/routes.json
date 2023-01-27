@@ -112,6 +112,22 @@
     "_name": "_68dc5e2d"
   },
   {
+    "name": "packdetail",
+    "path": "/packdetail",
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\packdetail.vue",
+    "chunkName": "pages/packdetail",
+    "children": [
+      {
+        "name": "packdetail-id",
+        "path": ":id?",
+        "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\packdetail\\\\_id.vue",
+        "chunkName": "pages/packdetail/_id",
+        "_name": "_4a5d23ec"
+      }
+    ],
+    "_name": "_56c4223e"
+  },
+  {
     "name": "privacy-policy",
     "path": "/privacy-policy",
     "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\privacy-policy.vue",

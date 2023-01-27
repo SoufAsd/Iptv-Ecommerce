@@ -15,7 +15,7 @@
             </div>
             <div class="col-sm-6">
               <div class="slider-single-img slider-img-animation">
-                <img src="/img/slider/single-slide-1.png" alt="image" />
+                <img src="/img/slider/Family-on-couch-cropped-soccer-scaled.jpg" alt="image" />
               </div>
             </div>
           </div>
