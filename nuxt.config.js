@@ -12,12 +12,11 @@ export default {
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: '' }
+            { hid: 'description', name: 'description', content: '' },
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         ],
-        
     },
 
     // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -75,11 +74,13 @@ export default {
 
     // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
     buildModules: [
+        
     ],
     // Modules (https://go.nuxtjs.dev/config-modules)
     modules: [
         '@nuxtjs/style-resources',
         '@nuxtjs/axios',
+        '@nuxtjs/auth-next'
     ],
     axios: {
         baseURL: 'http://127.0.0.1:8000/',
@@ -89,9 +90,30 @@ export default {
             '~/assets/scss/_variables.scss',
         ]
     },
-
+    auth: {
+        redirect: {
+          login: '/login-register',
+          logout: '/',
+          callback: '/login-register',
+          home: '/'
+        },
+        strategies: {
+            google: {
+              clientId: '619518220362-cacdb3tks7nhra1eutrbjq78q13ikbb1.apps.googleusercontent.com',
+codeChallengeMethod: '',
+responseType: 'code',
+              endpoints: {
+                token: 'http://localhost:8000/api/client/google/post',
+                userInfo: 'http://localhost:8000/api/client/google/get'
+        },
+            },
+          }
+      },
     // Build Configuration (https://go.nuxtjs.dev/config-build)
     build: {
+        transpile: [
+            "vee-validate/dist/rules"
+          ],
         extractCSS: true,
         extend (config, ctx) {
         },

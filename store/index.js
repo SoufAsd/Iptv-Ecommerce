@@ -8,12 +8,20 @@ export const state = () => ({
     products: products,
     cart: [],
     wishlist: [],
-    compare: []
+    compare: [],
+    token: '',
+    isAuth : false
 })
 
 
 // your root getters
 export const getters = {
+    getToken(state) {
+        return state.token
+    },
+    getisAuth(state) {
+        return state.isAuth
+    },
     getProducts(state) {
         return state.products
     },
@@ -147,11 +155,24 @@ export const mutations = {
             return product.id !== item.id
         });
     },
+    REGISTER(state) {
+        console.log(state.isAuth)
+     },
 }
 
 
 // contains your actions
 export const actions = {
+    async registerUser({commit}, payload) {
+        const ip = await this.$axios.$post('api/clientregister',payload.prod,payload.requestOptions)
+        commit('REGISTER', ip)
+        
+    },
+    async loginUser({commit}, payload) {
+        const ip = await this.$axios.$post('api/loginregister',payload.prod,payload.requestOptions)
+        commit('REGISTER', ip)
+        
+    },
     addToCartItem({commit}, payload) {
         commit('UPDATE_CART', payload)
     },

@@ -147,6 +147,7 @@
 
 <script>
     export default {
+        middleware : 'auth',
         components: {
             HeaderWithTopbar: () => import("@/components/HeaderWithTopbar"),
             Breadcrumb: () => import("@/components/Breadcrumb"),
