@@ -314,7 +314,8 @@ h3.cart-page-title {
 }
 
 .grand-total {
-    background-color: #f9f9f9;
+    background: #ffffff;
+    box-shadow: 0 20px 50px 0 rgb(28 9 80 / 7%);
     border: 1px solid #ebebeb;
     border-radius: 5px;
     padding: 45px 30px 50px;
@@ -345,7 +346,7 @@ h3.cart-page-title {
             padding-right: 18px;
         }
         .section-bg-gary-cart {
-            background-color: #f9f9f9;
+            background-color: #ffffff;
             position: relative;
             z-index: 9;
         }

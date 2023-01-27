@@ -36,6 +36,7 @@ export { default as BannerStyleFour } from '../..\\components\\banner\\BannerSty
 export { default as BannerStyleOne } from '../..\\components\\banner\\BannerStyleOne.vue'
 export { default as BannerStyleThree } from '../..\\components\\banner\\BannerStyleThree.vue'
 export { default as BannerStyleTwo } from '../..\\components\\banner\\BannerStyleTwo.vue'
+export { default as ChainnesChaineInfo } from '../..\\components\\chainnes\\chaineInfo.vue'
 export { default as HeroSlider } from '../..\\components\\hero\\HeroSlider.vue'
 export { default as HeroSliderCosmetics } from '../..\\components\\hero\\HeroSliderCosmetics.vue'
 export { default as HeroSliderFive } from '../..\\components\\hero\\HeroSliderFive.vue'
@@ -59,7 +60,7 @@ export { default as ProductWrapperFour } from '../..\\components\\product\\Produ
 export { default as ProductWrapperSeven } from '../..\\components\\product\\ProductWrapperSeven.vue'
 export { default as ProductWrapperThree } from '../..\\components\\product\\ProductWrapperThree.vue'
 export { default as ProductWrapperTwo } from '../..\\components\\product\\ProductWrapperTwo.vue'
-
+export { default as chaineInfo } from '../..\\components\\chainnes\\chaineInfo.vue'
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
   if (!options || !options.functional) {

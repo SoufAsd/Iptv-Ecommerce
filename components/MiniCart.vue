@@ -1,22 +1,22 @@
 <template>
     <div class="minicart-wrapper" :class="miniCart">
-        <div class="shopping-cart-content" v-if="products.length > 0">
+        <div class="shopping-cart-content" v-if="products">
             <ul>
-                <li class="single-shopping-cart" v-for="(product, index) in products" :key="index">
+                <li class="single-shopping-cart" v-for="(pack, index) in products" :key="index">
                     <div class="shopping-cart-img">
-                        <n-link :to="`/product/${slugify(product.title)}`">
-                            <img :src="product.images[0]" :alt="product.title">
-                        </n-link>
+                        <nuxt-link :to="`/packdetail/${pack.id}`">
+                            <img :src="baseURL+pack.image" :alt="pack.name">
+                        </nuxt-link>
                     </div>
                     <div class="shopping-cart-title">
                         <h4>
-                            <n-link :to="`/product/${slugify(product.title)}`">{{ product.title }}</n-link>
+                            <nuxt-link :to="`/packdetail/${pack.id}`">{{ pack.name }}</nuxt-link>
                         </h4>
-                        <h6>Qty: {{ product.cartQuantity }}</h6>
-                        <span>${{ discountedPrice(product).toFixed(2) }}</span>
+                        <h6>Qty: {{ pack.cartQuantity }}</h6>
+                        <span>${{ pack.price.toFixed(2) }}</span>
                     </div>
                     <div class="shopping-cart-delete">
-                        <button @click="removeProduct(product)">
+                        <button @click="removeProduct(pack)">
                             <i class="fa fa-times-circle"></i>
                         </button>
                     </div>
@@ -39,9 +39,14 @@
 <script>
     export default {
         props: ["miniCart"],
-
+        data(){
+            return {
+                baseURL:'http://127.0.0.1:8000',
+            }
+        },
         computed: {
             products() {
+             
                 return this.$store.getters.getCart
             },
             total() {
