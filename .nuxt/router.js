@@ -4,7 +4,6 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-<<<<<<< HEAD
 const _7ab6af30 = () => interopDefault(import('..\\pages\\about.vue' /* webpackChunkName: "pages/about" */))
 const _37f57153 = () => interopDefault(import('..\\pages\\blog\\index.vue' /* webpackChunkName: "pages/blog/index" */))
 const _597098cd = () => interopDefault(import('..\\pages\\cart.vue' /* webpackChunkName: "pages/cart" */))
@@ -21,6 +20,8 @@ const _76d79276 = () => interopDefault(import('..\\pages\\home-fashion-two.vue' 
 const _3983f718 = () => interopDefault(import('..\\pages\\login-register.vue' /* webpackChunkName: "pages/login-register" */))
 const _51021a0e = () => interopDefault(import('..\\pages\\my-account.vue' /* webpackChunkName: "pages/my-account" */))
 const _f46f4974 = () => interopDefault(import('..\\pages\\pack.vue' /* webpackChunkName: "pages/pack" */))
+const _eb0baed2 = () => interopDefault(import('..\\pages\\packdetail.vue' /* webpackChunkName: "pages/packdetail" */))
+const _654ba59a = () => interopDefault(import('..\\pages\\packdetail\\_id.vue' /* webpackChunkName: "pages/packdetail/_id" */))
 const _b3c8d1f8 = () => interopDefault(import('..\\pages\\privacy-policy.vue' /* webpackChunkName: "pages/privacy-policy" */))
 const _44781da3 = () => interopDefault(import('..\\pages\\shop.vue' /* webpackChunkName: "pages/shop" */))
 const _55cc0676 = () => interopDefault(import('..\\pages\\shop-grid-full-width.vue' /* webpackChunkName: "pages/shop-grid-full-width" */))
@@ -37,42 +38,6 @@ const _6dbcc10d = () => interopDefault(import('..\\pages\\product\\product-affil
 const _363ed00b = () => interopDefault(import('..\\pages\\blog\\_slug.vue' /* webpackChunkName: "pages/blog/_slug" */))
 const _a6fb3bb0 = () => interopDefault(import('..\\pages\\product\\_slug.vue' /* webpackChunkName: "pages/product/_slug" */))
 const _cb22ec16 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
-=======
-const _0bb9edae = () => interopDefault(import('..\\pages\\about.vue' /* webpackChunkName: "pages/about" */))
-const _162aa6e8 = () => interopDefault(import('..\\pages\\blog\\index.vue' /* webpackChunkName: "pages/blog/index" */))
-const _3c849bb4 = () => interopDefault(import('..\\pages\\cart.vue' /* webpackChunkName: "pages/cart" */))
-const _0de88cda = () => interopDefault(import('..\\pages\\checkout.vue' /* webpackChunkName: "pages/checkout" */))
-const _360334fe = () => interopDefault(import('..\\pages\\compare.vue' /* webpackChunkName: "pages/compare" */))
-const _0002373c = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages/contact" */))
-const _7bd2caaa = () => interopDefault(import('..\\pages\\home-cosmetics.vue' /* webpackChunkName: "pages/home-cosmetics" */))
-const _282b7b71 = () => interopDefault(import('..\\pages\\home-fashion-five.vue' /* webpackChunkName: "pages/home-fashion-five" */))
-const _649337e5 = () => interopDefault(import('..\\pages\\home-fashion-four.vue' /* webpackChunkName: "pages/home-fashion-four" */))
-const _6ec3e444 = () => interopDefault(import('..\\pages\\home-fashion-seven.vue' /* webpackChunkName: "pages/home-fashion-seven" */))
-const _4de83273 = () => interopDefault(import('..\\pages\\home-fashion-six.vue' /* webpackChunkName: "pages/home-fashion-six" */))
-const _7f237a22 = () => interopDefault(import('..\\pages\\home-fashion-three.vue' /* webpackChunkName: "pages/home-fashion-three" */))
-const _cb991a46 = () => interopDefault(import('..\\pages\\home-fashion-two.vue' /* webpackChunkName: "pages/home-fashion-two" */))
-const _2114d29b = () => interopDefault(import('..\\pages\\login-register.vue' /* webpackChunkName: "pages/login-register" */))
-const _b86e26c0 = () => interopDefault(import('..\\pages\\my-account.vue' /* webpackChunkName: "pages/my-account" */))
-const _68dc5e2d = () => interopDefault(import('..\\pages\\pack.vue' /* webpackChunkName: "pages/pack" */))
-const _56c4223e = () => interopDefault(import('..\\pages\\packdetail.vue' /* webpackChunkName: "pages/packdetail" */))
-const _4a5d23ec = () => interopDefault(import('..\\pages\\packdetail\\_id.vue' /* webpackChunkName: "pages/packdetail/_id" */))
-const _381b35aa = () => interopDefault(import('..\\pages\\privacy-policy.vue' /* webpackChunkName: "pages/privacy-policy" */))
-const _278c208a = () => interopDefault(import('..\\pages\\shop.vue' /* webpackChunkName: "pages/shop" */))
-const _2d3151ac = () => interopDefault(import('..\\pages\\shop-grid-full-width.vue' /* webpackChunkName: "pages/shop-grid-full-width" */))
-const _2ceec818 = () => interopDefault(import('..\\pages\\shop-grid-no-sidebar.vue' /* webpackChunkName: "pages/shop-grid-no-sidebar" */))
-const _a666ef92 = () => interopDefault(import('..\\pages\\shop-grid-right-sidebar.vue' /* webpackChunkName: "pages/shop-grid-right-sidebar" */))
-const _6bcfd31b = () => interopDefault(import('..\\pages\\shop-grid-two-column.vue' /* webpackChunkName: "pages/shop-grid-two-column" */))
-const _efb65d58 = () => interopDefault(import('..\\pages\\shop-list-full-width.vue' /* webpackChunkName: "pages/shop-list-full-width" */))
-const _2a93ed89 = () => interopDefault(import('..\\pages\\shop-list-standard.vue' /* webpackChunkName: "pages/shop-list-standard" */))
-const _748c135c = () => interopDefault(import('..\\pages\\terms-conditions.vue' /* webpackChunkName: "pages/terms-conditions" */))
-const _b5cac44e = () => interopDefault(import('..\\pages\\wishlist.vue' /* webpackChunkName: "pages/wishlist" */))
-const _c9b47d14 = () => interopDefault(import('..\\pages\\blog\\blog-right-sidebar.vue' /* webpackChunkName: "pages/blog/blog-right-sidebar" */))
-const _72e7853c = () => interopDefault(import('..\\pages\\blog\\blog-without-sidebar.vue' /* webpackChunkName: "pages/blog/blog-without-sidebar" */))
-const _5fc48cb4 = () => interopDefault(import('..\\pages\\product\\product-affiliate.vue' /* webpackChunkName: "pages/product/product-affiliate" */))
-const _1997e978 = () => interopDefault(import('..\\pages\\blog\\_slug.vue' /* webpackChunkName: "pages/blog/_slug" */))
-const _2b4d9f62 = () => interopDefault(import('..\\pages\\product\\_slug.vue' /* webpackChunkName: "pages/product/_slug" */))
-const _19dae3ee = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
->>>>>>> b7a0cb2ed2ee56eabeaadbae7f0d06da09179bfd
 
 const emptyFn = () => {}
 
@@ -151,11 +116,11 @@ export const routerOptions = {
     name: "pack"
   }, {
     path: "/packdetail",
-    component: _56c4223e,
+    component: _eb0baed2,
     name: "packdetail",
     children: [{
       path: ":id?",
-      component: _4a5d23ec,
+      component: _654ba59a,
       name: "packdetail-id"
     }]
   }, {

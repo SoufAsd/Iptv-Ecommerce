@@ -55,7 +55,6 @@ export default {
         '~/plugins/vue-awesome-swiper.js',
         '~/plugins/vuejs-pagiante.js',
         '~/plugins/observe-visibility.js',
-        { src: '~/plugins/paypal.client.js' },
         { src:'~/plugins/checkcart.js', mode: 'client' },
         { 
             src: '~/plugins/bootstrap.js', 

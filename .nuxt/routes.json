@@ -114,18 +114,18 @@
   {
     "name": "packdetail",
     "path": "/packdetail",
-    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\packdetail.vue",
+    "component": "C:\\\\Users\\\\hp\\\\Desktop\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\packdetail.vue",
     "chunkName": "pages/packdetail",
     "children": [
       {
         "name": "packdetail-id",
         "path": ":id?",
-        "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\packdetail\\\\_id.vue",
+        "component": "C:\\\\Users\\\\hp\\\\Desktop\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\packdetail\\\\_id.vue",
         "chunkName": "pages/packdetail/_id",
-        "_name": "_4a5d23ec"
+        "_name": "_654ba59a"
       }
     ],
-    "_name": "_56c4223e"
+    "_name": "_eb0baed2"
   },
   {
     "name": "privacy-policy",

@@ -18,7 +18,6 @@ import nuxt_plugin_axios_d758ac0a from 'nuxt_plugin_axios_d758ac0a' // Source: .
 import nuxt_plugin_vueawesomeswiper_5ce03f58 from 'nuxt_plugin_vueawesomeswiper_5ce03f58' // Source: ..\\plugins\\vue-awesome-swiper.js (mode: 'all')
 import nuxt_plugin_vuejspagiante_7edc93b2 from 'nuxt_plugin_vuejspagiante_7edc93b2' // Source: ..\\plugins\\vuejs-pagiante.js (mode: 'all')
 import nuxt_plugin_observevisibility_b986de04 from 'nuxt_plugin_observevisibility_b986de04' // Source: ..\\plugins\\observe-visibility.js (mode: 'all')
-import nuxt_plugin_paypalclient_89b106f2 from 'nuxt_plugin_paypalclient_89b106f2' // Source: ..\\plugins\\paypal.client.js (mode: 'client')
 import nuxt_plugin_checkcart_1ca06745 from 'nuxt_plugin_checkcart_1ca06745' // Source: ..\\plugins\\checkcart.js (mode: 'client')
 import nuxt_plugin_bootstrap_68fdc73f from 'nuxt_plugin_bootstrap_68fdc73f' // Source: ..\\plugins\\bootstrap.js (mode: 'client')
 import nuxt_plugin_vuejsmodal_f50827f4 from 'nuxt_plugin_vuejsmodal_f50827f4' // Source: ..\\plugins\\vue-js-modal (mode: 'client')
@@ -238,10 +237,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_observevisibility_b986de04 === 'function') {
     await nuxt_plugin_observevisibility_b986de04(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_paypalclient_89b106f2 === 'function') {
-    await nuxt_plugin_paypalclient_89b106f2(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_checkcart_1ca06745 === 'function') {
