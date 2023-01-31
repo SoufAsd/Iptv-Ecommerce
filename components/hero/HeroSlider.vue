@@ -1,7 +1,7 @@
 <template>
   <div class="slider-area nav-style-1">
     <swiper :options="swiperOption">
-      <swiper-slide v-for="slider in sliders" :key="slider" class="single-slider slider-height-1 bg-primarycolor">
+      <swiper-slide v-for="(slider,idx) in sliders" :key="idx" class="single-slider slider-height-1 bg-primarycolor">
         <div class="container">
           <div class="row">
             <div class="col-sm-6">

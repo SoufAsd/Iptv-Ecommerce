@@ -10,6 +10,8 @@ export const state = () => ({
     cart: [],
     wishlist: [],
     compare: [],
+    token: '',
+    isAuth : false,
     pack:[],
     selectedPack:{},
 })
@@ -17,6 +19,12 @@ export const state = () => ({
 
 // your root getters
 export const getters = {
+    getToken(state) {
+        return state.token
+    },
+    getisAuth(state) {
+        return state.isAuth
+    },
     getProducts(state) {
         return state.products
     },
@@ -167,11 +175,45 @@ export const mutations = {
             return product.id !== item.id
         });
     },
+    REGISTER(state) {
+        this.$auth.$storage.setState('loggedIn', true)
+     },
+    LOGIN(state) {
+        this.$auth.$storage.setState('loggedIn', true)
+     },
 }
 
 
 // contains your actions
 export const actions = {
+    async registerUser({commit}, payload) {
+        const ip = await this.$axios.$post('api/clientregister',payload.prod,payload.requestOptions)
+        .then(data => {
+            commit('REGISTER', data)
+         })
+         .catch(error => {
+            Vue.notify({
+                group: 'register',
+                title: "Warning",
+                text: error.response.data.message,
+                type: 'error'
+              })
+         })
+    },
+    async loginUser({commit}, payload) {
+        const ip = await this.$axios.$post('api/loginregister',payload.prod,payload.requestOptions)
+        .then(data => {
+            commit('LOGIN', ip)
+         })
+         .catch(error => {
+            Vue.notify({
+                group: 'foo',
+                title: error.response.data.message,
+                text: 'Email or Password incorrect!',
+                type: 'error'
+              })
+         })     
+    },
     addToCartItem({commit}, payload) {
         commit('UPDATE_CART', payload)
     },

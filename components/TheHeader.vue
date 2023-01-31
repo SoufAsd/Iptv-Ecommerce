@@ -32,9 +32,10 @@
                                 <button class="account-setting-active" @click="isOpenAccountSettings = !isOpenAccountSettings"><i class="pe-7s-user-female"></i></button>
                                 <div class="account-dropdown" :class="{ active:isOpenAccountSettings }">
                                     <ul>
-                                        <li><n-link to="/login-register">Login</n-link></li>
-                                        <li><n-link to="/login-register">Register</n-link></li>
-                                        <li><n-link to="/my-account">my account</n-link></li>
+                                        <li><n-link to="/login-register" v-if="isAuth==false">Login</n-link></li>
+                                        <li><n-link to="/login-register" v-if="isAuth==false">Register</n-link></li>
+                                        <li><n-link to="/my-account" v-if="isAuth==true">my account</n-link></li>
+                                        <li><a @click="logout" v-if="isAuth==true">logout</a></li> 
                                     </ul>
                                 </div>
                             </div>
@@ -85,14 +86,19 @@
                 return this.$store.getters.compareItemCount
             }
         },
-
+        methods:{
+            async logout(){
+                await this.$auth.logout()
+            }
+        },
         data() {
             return {
                 isSticky: false,
                 isOpenSearch: false,
                 isOpenAccountSettings: false,
                 openCart: false,
-                navOpen: false
+                navOpen: false,
+                isAuth:this.$auth.loggedIn
             }
         },
 
