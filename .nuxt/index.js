@@ -23,6 +23,7 @@ import nuxt_plugin_checkcart_1ca06745 from 'nuxt_plugin_checkcart_1ca06745' // S
 import nuxt_plugin_bootstrap_68fdc73f from 'nuxt_plugin_bootstrap_68fdc73f' // Source: ..\\plugins\\bootstrap.js (mode: 'client')
 import nuxt_plugin_vuejsmodal_f50827f4 from 'nuxt_plugin_vuejsmodal_f50827f4' // Source: ..\\plugins\\vue-js-modal (mode: 'client')
 import nuxt_plugin_notificationsclient_f727f91e from 'nuxt_plugin_notificationsclient_f727f91e' // Source: ..\\plugins\\notifications-client.js (mode: 'client')
+import nuxt_plugin_aos_caeae0de from 'nuxt_plugin_aos_caeae0de' // Source: ..\\plugins\\aos (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -257,6 +258,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_notificationsclient_f727f91e === 'function') {
     await nuxt_plugin_notificationsclient_f727f91e(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_aos_caeae0de === 'function') {
+    await nuxt_plugin_aos_caeae0de(app.context, inject)
   }
 
   // Lock enablePreview in context

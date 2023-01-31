@@ -1,5 +1,5 @@
 <template>
-    <div class="product-area pb-90">
+    <div class="product-area bg-gray pt-20 pb-90">
         <div class="container">
             <SectionTitleWithSubTitle title=" NOS PACKS!" classes="section-title"  />
 
@@ -7,7 +7,7 @@
                 <div class="tab-pane fade show active"  role="tabpanel">
                     <div class="row">
                         <div class="col-xl-3 col-lg-4 col-sm-6" v-for="pack in $store.state.pack" :key="pack.id">
-                            <div class="product-wrap mb-30">
+                            <div class="product-wrap mb-30" data-aos="fade-left">
                                         <div class="product-img" >
                                             <nuxt-link :to="`/packdetail/${pack.id}` " >
                                                 <span @click="updateSelectedPack(pack)">

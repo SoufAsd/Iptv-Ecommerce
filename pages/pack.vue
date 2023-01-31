@@ -38,7 +38,7 @@
                         <div class="shop-bottom-area mt-35">
                             <div class="row product-layout"  :class="{ 'list': layout === 'list', 'grid three-column': layout === 'threeColumn', 'grid two-column': layout === 'twoColumn' }" >
                                 <div class="col-xl-4 col-sm-6" v-for="pack in $store.state.pack" :key="pack.id">
-                                   <div class="product-wrap mb-30">
+                                   <div class="product-wrap mb-30" >
                                         <div class="product-img" >
                                             <nuxt-link :to="`/packdetail/${pack.id}` " >
                                                 <span @click="updateSelectedPack(pack)">

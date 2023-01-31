@@ -60,7 +60,7 @@ export { default as ProductWrapperFour } from '../..\\components\\product\\Produ
 export { default as ProductWrapperSeven } from '../..\\components\\product\\ProductWrapperSeven.vue'
 export { default as ProductWrapperThree } from '../..\\components\\product\\ProductWrapperThree.vue'
 export { default as ProductWrapperTwo } from '../..\\components\\product\\ProductWrapperTwo.vue'
-export { default as chaineInfo } from '../..\\components\\chainnes\\chaineInfo.vue'
+
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
   if (!options || !options.functional) {
