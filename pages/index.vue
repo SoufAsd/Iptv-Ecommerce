@@ -3,7 +3,7 @@
         <TheHeader />
         <HeroSlider />
         <PolicyServicePolicyTwo />
-        <chaineInfo />
+        <ChainnesChaineInfo />
         <ProductWrapper :packs="$store.state.pack"  />
         <TheFooter />
     </div>

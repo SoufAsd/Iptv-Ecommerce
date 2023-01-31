@@ -28,6 +28,7 @@
         "vue-observe-visibility": "^1.0.0",
         "vue-pagination-2": "^3.0.91",
         "vue-paypal-checkout": "^3.2.0",
+        "vue-toastification": "^1.7.14",
         "vuex-persistedstate": "^2.5.4"
     },
     "devDependencies": {

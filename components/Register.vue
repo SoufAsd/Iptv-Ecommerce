@@ -1,5 +1,13 @@
 <template>
-  <div class="register-form">
+  <div class="register-form white-bg">
+    <div class="row mb-4">
+        <div class="col">
+          <button class="fa fa-facebook"></button>
+        </div>
+        <div class="col">
+          <button @click="RegisterWithGoogle()" class="fa fa-google"></button>
+        </div>
+      </div>
     <ValidationObserver v-slot="{ handleSubmit,invalid }">
       <form @submit.prevent="handleSubmit(onSubmit)">
         <ValidationProvider
@@ -7,17 +15,18 @@
           rules="required|email"
           v-slot="{ errors }"
         >
+        <span>{{ errors[0] }}</span>
           <input v-model="email" placeholder="email" type="email" />
-          <span>{{ errors[0] }}</span>
         </ValidationProvider>
 
         <ValidationProvider
-          name="username"
+          name="Name"
           rules="required|alpha"
           v-slot="{ errors }"
         >
-          <input v-model="username" placeholder="username" type="text" />
-          <span>{{ errors[0] }}</span>
+        <span>{{ errors[0] }}</span>
+          <input v-model="Name" placeholder="Name" type="text" />
+          
         </ValidationProvider>
 
         <ValidationProvider
@@ -25,13 +34,17 @@
           rules="required|alpha_dash|min:6"
           v-slot="{ errors }"
         >
+        <span>{{ errors[0] }}</span>
           <input v-model="password" placeholder="password" type="password" />
-          <span>{{ errors[0] }}</span>
+          
         </ValidationProvider>
+        <div class="button-box">
+          <button type="submit">Register</button>
+        </div>
 
-        <button type="submit" :disabled="invalid">Register</button>
       </form>
     </ValidationObserver>
+    <notifications position="bottom right" group="register" />
     <!-- <button @click="submit">Register</button> -->
   </div>
 </template>
@@ -59,16 +72,19 @@ export default {
   },
   data() {
     return {
-      username: "",
+      Name: "",
       password: "",
       email: "",
       phone: "",
     };
   },
   methods: {
+    RegisterWithGoogle() {
+      this.$auth.loginWith("google", { params: { prompt: "select_account" } });
+    },
     onSubmit() {
       const prod = {
-        username: this.username,
+        name: this.Name,
         password: this.password,
         email: this.email,
         phone: this.phone,

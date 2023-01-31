@@ -1,39 +1,67 @@
 <template>
-  <div class="login-form">
-    <button type="button" @click="loginWithGoogle()" class="login-with-google-btn">
-      Sign in with Google
-    </button>
-    <form @submit.prevent="onSubmit">
-      <input
-        type="email"
-        v-model="email"
-        name="user-name"
-        placeholder="Email"
-      />
-      <input
-        type="password"
-        v-model="password"
-        name="user-password"
-        placeholder="Password"
-      />
-      <div class="button-box">
-        <div class="login-toggle-btn">
-          <input type="checkbox" />
-          <label>Remember me</label>
-          <a href="#">Forgot Password?</a>
-        </div>
-        <button type="submit">Login</button>
+  <div class="login-form white-bg">
+    <div class="row mb-4">
+      <div class="col">
+        <button class="fa fa-facebook"></button>
       </div>
-    </form>
-    <!-- <button @click="loginWithGoogle()" icon-left="google">
-      Sign in with Google
-    </button> -->
-    <!-- <div class="g-signin2" data-onsuccess="onSignIn"> -->
-    <!-- <div id="googleButton"></div> -->
+      <div class="col">
+        <button @click="loginWithGoogle()" class="fa fa-google"></button>
+      </div>
+    </div>
+    <ValidationObserver v-slot="{ handleSubmit, invalid }">
+      <form @submit.prevent="handleSubmit(onSubmit)">
+        <ValidationProvider
+          name="E-mail"
+          rules="required|email"
+          v-slot="{ errors }"
+        >
+        <span>{{ errors[0] }}</span>
+          <input
+            type="email"
+            v-model="email"
+            name="email"
+            placeholder="Email"
+          />
+        </ValidationProvider>
+        <ValidationProvider
+          name="password"
+          rules="required|alpha_dash|min:6"
+          v-slot="{ errors }"
+        >
+        <span>{{ errors[0] }}</span>
+        <input
+          type="password"
+          v-model="password"
+          name="password"
+          placeholder="Password"
+        />
+      </ValidationProvider>
+        <div class="button-box">
+          <div class="login-toggle-btn">
+            <input type="checkbox" />
+            <label>Remember me</label>
+            <a href="#">Forgot Password?</a>
+          </div>
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </ValidationObserver>
+    <notifications position="bottom right" group="foo" />
   </div>
 </template>
 <script>
+import { ValidationProvider, ValidationObserver } from "vee-validate";
+import * as rules from "vee-validate/dist/rules";
+import { extend } from 'vee-validate';
+import { required } from 'vee-validate/dist/rules';
+
 export default {
+  components: {
+    ValidationProvider,
+    ValidationObserver,
+    rules,
+    required
+  },
   data() {
     return {
       username: "",
@@ -43,15 +71,13 @@ export default {
     };
   },
   methods: {
-    loginWithGoogle() {
-      this.$auth.loginWith("google");
+    loginWithGoogle(){
+      this.$auth.loginWith("google", { params: { prompt: "select_account" } });
     },
     onSubmit() {
       const prod = {
-        // username: this.username,
         password: this.password,
         email: this.email,
-        // phone: this.phone,
       };
       const requestOptions = {
         headers: {
@@ -65,61 +91,33 @@ export default {
       console.log(response);
     },
   },
-  // mounted() {
-  //   // initialize Google Sign in
-  //   google.accounts.id.initialize({
-  //       client_id: '619518220362-cacdb3tks7nhra1eutrbjq78q13ikbb1.apps.googleusercontent.com',
-  //       callback: this.handleCredentialResponse,
-  //       context: 'signin'
-  //     })
-
-  //   // render button
-  //   google.accounts.id.renderButton(
-  //     document.getElementById('googleButton'),
-  //     {
-  //       type: 'standard',
-  //       size: 'large',
-  //       text: 'signin_with',
-  //       shape: 'rectangular',
-  //       logo_alignment: 'center',
-  //       width: 250
-  //     }
-  //   )
-  // },
 };
 </script>
 <style lang="scss">
-.login-with-google-btn {
-  transition: background-color 0.3s, box-shadow 0.3s;
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  margin: auto 0;
+}
 
-  padding: 12px 16px 12px 42px;
-  border: none;
-  border-radius: 3px;
-  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+.fa:hover {
+  opacity: 0.7;
+}
 
-  color: #757575;
-  font-size: 14px;
-  font-weight: 500;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
 
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
-  background-color: white;
-  background-repeat: no-repeat;
-  background-position: 12px 11px;
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
 
-  &:hover {
-    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
-  }
-
-  &:active {
-    background-color: #eeeeee;
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25),
-      0 0 0 3px #c8dafc;
-  }
+.white-bg {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 </style>

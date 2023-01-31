@@ -158,10 +158,18 @@
             Breadcrumb: () => import("@/components/Breadcrumb"),
             TheFooter: () => import("@/components/TheFooter"),
         },
+        data(){
+            return{
+                isAuth:this.$auth.loggedIn
+            }
+        },
         head() {
             return {
                 title: "My Account"
             }
+        },
+        mounted(){
+            // console.log(this.$auth.loggedIn);
         }
     }
 </script>

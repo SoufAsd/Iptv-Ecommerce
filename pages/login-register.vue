@@ -3,16 +3,18 @@
     <HeaderWithTopbar containerClass="container" />
     <Breadcrumb pageTitle="login-register" />
 
-    <div class="login-register-area pt-100 pb-100">
+    <div class="login-register-area pt-100 pb-100 bg-img">
       <div class="container">
         <div class="login-register-tab-list nav">
           <button
+          class="white-text"
             @click="comA('Login')"
             :class="{ active: isActive === 'Login' }"
           >
             Login
           </button>
           <button
+          class="white-text"
             @click="comA('Register')"
             :class="{ active: isActive === 'Register' }"
           >
@@ -32,6 +34,7 @@
 
 <script>
 export default {
+  auth: 'guest',
   data() {
     return {
       isActive: "Login",
@@ -63,3 +66,11 @@ export default {
   },
 };
 </script>
+<style scoped>
+.bg-img{
+  background-image: url('@/static/img/bg/login-register-bg.png')
+}
+.white-text{
+  color:#87B2FA
+}
+</style>

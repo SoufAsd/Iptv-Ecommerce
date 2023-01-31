@@ -176,7 +176,10 @@ export const mutations = {
         });
     },
     REGISTER(state) {
-        console.log(state.isAuth)
+        this.$auth.$storage.setState('loggedIn', true)
+     },
+    LOGIN(state) {
+        this.$auth.$storage.setState('loggedIn', true)
      },
 }
 
@@ -185,13 +188,31 @@ export const mutations = {
 export const actions = {
     async registerUser({commit}, payload) {
         const ip = await this.$axios.$post('api/clientregister',payload.prod,payload.requestOptions)
-        commit('REGISTER', ip)
-        
+        .then(data => {
+            commit('REGISTER', data)
+         })
+         .catch(error => {
+            Vue.notify({
+                group: 'register',
+                title: "Warning",
+                text: error.response.data.message,
+                type: 'error'
+              })
+         })
     },
     async loginUser({commit}, payload) {
         const ip = await this.$axios.$post('api/loginregister',payload.prod,payload.requestOptions)
-        commit('REGISTER', ip)
-        
+        .then(data => {
+            commit('LOGIN', ip)
+         })
+         .catch(error => {
+            Vue.notify({
+                group: 'foo',
+                title: error.response.data.message,
+                text: 'Email or Password incorrect!',
+                type: 'error'
+              })
+         })     
     },
     addToCartItem({commit}, payload) {
         commit('UPDATE_CART', payload)
