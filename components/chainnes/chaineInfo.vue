@@ -1,5 +1,5 @@
 <template>
-    <div class="support-area pt-100 pb-90">
+    <div class="support-area bg-gray pt-60 pb-60">
         <div class="container">
             <div class="row chain-bg">
                 <div class="rs-zone">
@@ -32,13 +32,14 @@
 
 <script>
 export default {
-    
+  
 }
   
 </script>
 
 
 <style>
+ 
 .slider{
     z-index: 20;
     background: linear-gradient(160deg, rgba(130, 0, 159, 0.5) 0%, rgba(189, 26, 127, 0) 50%, rgba(247, 52, 94, 0) 100%);

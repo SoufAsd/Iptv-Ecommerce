@@ -21,6 +21,7 @@ export default {
 
     // Global CSS (https://go.nuxtjs.dev/config-css)
     css: [
+        'aos/dist/aos.css',
         '~/assets/scss/bootstrap.scss',
         '~/assets/scss/_common.scss',
         '~/assets/scss/_header.scss',
@@ -68,6 +69,7 @@ export default {
             src: '~/plugins/notifications-client.js', 
             mode: 'client' 
         },
+        { src: "@/plugins/aos", mode: "client" ,ssr: false},
     ],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)

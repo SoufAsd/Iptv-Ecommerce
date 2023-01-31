@@ -2,8 +2,9 @@
     <div class="home-page-wrapper">
         <TheHeader />
         <HeroSlider />
-        <PolicyServicePolicyTwo />
+        <PolicyServicePolicy />
         <ChainnesChaineInfo />
+        <DealWithCountdown />
         <ProductWrapper :packs="$store.state.pack"  />
         <TheFooter />
     </div>
@@ -19,6 +20,7 @@
         data(){
             return {
                 baseURL:'http://127.0.0.1:8000',
+                
             }
         },
         fetch({$axios,store}){
