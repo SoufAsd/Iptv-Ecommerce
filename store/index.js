@@ -178,7 +178,7 @@ export const mutations = {
     REGISTER(state) {
         this.$auth.$storage.setState('loggedIn', true)
      },
-    LOGIN(state) {
+    LOGIN(state,data) {
         this.$auth.$storage.setState('loggedIn', true)
      },
 }

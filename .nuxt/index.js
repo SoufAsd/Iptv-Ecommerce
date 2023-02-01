@@ -256,13 +256,12 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_notificationsclient_f727f91e(app.context, inject)
   }
 
-<<<<<<< HEAD
   if (process.client && typeof nuxt_plugin_aos_caeae0de === 'function') {
     await nuxt_plugin_aos_caeae0de(app.context, inject)
-=======
+  }
+
   if (typeof nuxt_plugin_auth_0cea730c === 'function') {
     await nuxt_plugin_auth_0cea730c(app.context, inject)
->>>>>>> feature/clientAuth
   }
 
   // Lock enablePreview in context

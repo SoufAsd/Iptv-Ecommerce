@@ -74,7 +74,7 @@ export default {
     loginWithGoogle(){
       this.$auth.loginWith("google", { params: { prompt: "select_account" } });
     },
-    onSubmit() {
+    async onSubmit() {
       const prod = {
         password: this.password,
         email: this.email,
@@ -85,7 +85,7 @@ export default {
           "Content-Type": "application/vnd.api+json",
         },
       };
-      this.$store.dispatch("loginUser", { prod, requestOptions });
+      await this.$auth.loginWith('local', { data: prod })
     },
     handleCredentialResponse(response) {
       console.log(response);
