@@ -152,3 +152,12 @@ export default {
     }
 }
 </script>
+
+<style>
+.pro-details-rating {
+    display: flex;
+}
+.pro-details-rating::before {
+   background-color: #d1d1d100 !important;
+}
+</style> 

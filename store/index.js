@@ -14,6 +14,7 @@ export const state = () => ({
     isAuth : false,
     pack:[],
     selectedPack:{},
+    Quantity: '',
 })
 
 
@@ -112,6 +113,32 @@ export const mutations = {
     },
     UPDATE_CART(state, payload) {
         const item = state.cart.find(el => payload.id === el.id)
+        const login_user =  this.$auth.$storage.state.loggedIn
+        
+        if(login_user){
+              if(state.cart.length>0){
+                if(item){
+                    state.Quantity = item.cartQuantity + payload.cartQuantity
+                }else{
+                    state.Quantity=payload.cartQuantity
+                }
+                const data_req ={
+                    'token':state.token,
+                    'id_pack' :payload.id,
+                    'cartQuantity':state.Quantity
+                }
+                const update_comm =  this.$axios.$post('api/update_commande',data_req)
+                
+              }else{
+                const data_req ={
+                    'token':state.token,
+                    'pack' :payload
+                }
+                const new_comm =  this.$axios.$post('api/create_commande',data_req)
+               
+              }
+        }
+          
         if (item) {
             const price = item.price;
             item.cartQuantity = item.cartQuantity + payload.cartQuantity
@@ -122,6 +149,7 @@ export const mutations = {
             
             localStorage.setItem("cart", JSON.stringify(state.cart))
         }
+      
     },
     localCart(state,cart){
         return state.cart=cart
@@ -178,7 +206,8 @@ export const mutations = {
     REGISTER(state) {
         this.$auth.$storage.setState('loggedIn', true)
      },
-    LOGIN(state) {
+    LOGIN(state, data) {
+        state.token=data.accessToken
         this.$auth.$storage.setState('loggedIn', true)
      },
 }
@@ -203,7 +232,7 @@ export const actions = {
     async loginUser({commit}, payload) {
         const ip = await this.$axios.$post('api/loginregister',payload.prod,payload.requestOptions)
         .then(data => {
-            commit('LOGIN', ip)
+            commit('LOGIN', data)
          })
          .catch(error => {
             Vue.notify({
