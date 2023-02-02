@@ -206,12 +206,8 @@ export const mutations = {
     REGISTER(state) {
         this.$auth.$storage.setState('loggedIn', true)
      },
-<<<<<<< HEAD
     LOGIN(state, data) {
         state.token=data.accessToken
-=======
-    LOGIN(state,data) {
->>>>>>> b221d9c6cc3aa48d5b53c6dd609f1af4c5dd9f18
         this.$auth.$storage.setState('loggedIn', true)
      },
 }
