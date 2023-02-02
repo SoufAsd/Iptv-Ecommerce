@@ -3,6 +3,7 @@ import { Auth, authMiddleware, ExpiredAuthSessionError } from '~auth/runtime'
 
 // Active schemes
 import { Oauth2Scheme } from '~auth/runtime'
+import { LocalScheme } from '~auth/runtime'
 
 Middleware.auth = authMiddleware
 
@@ -17,7 +18,7 @@ export default function (ctx, inject) {
   "watchLoggedIn": true,
   "redirect": {
     "login": "/login-register",
-    "logout": "/",
+    "logout": "/login-register",
     "home": "/",
     "callback": "/login-register"
   },
@@ -56,6 +57,29 @@ export default function (ctx, inject) {
     "profile",
     "email"
   ]
+}))
+
+  // local
+  $auth.registerStrategy('local', new LocalScheme($auth, {
+  "token": {
+    "property": "token",
+    "global": true
+  },
+  "user": {
+    "property": "user"
+  },
+  "endpoints": {
+    "login": {
+      "url": "/api/loginregister",
+      "method": "post"
+    },
+    "logout": true,
+    "user": {
+      "url": "/api/client/infos",
+      "method": "get"
+    }
+  },
+  "name": "local"
 }))
 
   // Inject it to nuxt context as $auth
