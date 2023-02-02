@@ -2,241 +2,207 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\about.vue",
-    "chunkName": "pages/about",
-    "_name": "_1ef3c1fe"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\about.vue",
+    "chunkName": "pages/about"
   },
   {
     "name": "blog",
     "path": "/blog",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\blog\\\\index.vue",
-    "chunkName": "pages/blog/index",
-    "_name": "_4ba7ff38"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\blog\\\\index.vue",
+    "chunkName": "pages/blog/index"
   },
   {
     "name": "cart",
     "path": "/cart",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\cart.vue",
-    "chunkName": "pages/cart",
-    "_name": "_54fb6adc"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\cart.vue",
+    "chunkName": "pages/cart"
   },
   {
     "name": "checkout",
     "path": "/checkout",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\checkout.vue",
-    "chunkName": "pages/checkout",
-    "_name": "_62938802"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\checkout.vue",
+    "chunkName": "pages/checkout"
   },
   {
     "name": "compare",
     "path": "/compare",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\compare.vue",
-    "chunkName": "pages/compare",
-    "_name": "_6219354e"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\compare.vue",
+    "chunkName": "pages/compare"
   },
   {
     "name": "contact",
     "path": "/contact",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\contact.vue",
-    "chunkName": "pages/contact",
-    "_name": "_2c1191d8"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\contact.vue",
+    "chunkName": "pages/contact"
   },
   {
     "name": "home-cosmetics",
     "path": "/home-cosmetics",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\home-cosmetics.vue",
-    "chunkName": "pages/home-cosmetics",
-    "_name": "_290ec7d2"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\home-cosmetics.vue",
+    "chunkName": "pages/home-cosmetics"
   },
   {
     "name": "home-fashion-five",
     "path": "/home-fashion-five",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\home-fashion-five.vue",
-    "chunkName": "pages/home-fashion-five",
-    "_name": "_bfb6e56e"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\home-fashion-five.vue",
+    "chunkName": "pages/home-fashion-five"
   },
   {
     "name": "home-fashion-four",
     "path": "/home-fashion-four",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\home-fashion-four.vue",
-    "chunkName": "pages/home-fashion-four",
-    "_name": "_46e76c86"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\home-fashion-four.vue",
+    "chunkName": "pages/home-fashion-four"
   },
   {
     "name": "home-fashion-seven",
     "path": "/home-fashion-seven",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\home-fashion-seven.vue",
-    "chunkName": "pages/home-fashion-seven",
-    "_name": "_4fc73706"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\home-fashion-seven.vue",
+    "chunkName": "pages/home-fashion-seven"
   },
   {
     "name": "home-fashion-six",
     "path": "/home-fashion-six",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\home-fashion-six.vue",
-    "chunkName": "pages/home-fashion-six",
-    "_name": "_c7ccf4ca"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\home-fashion-six.vue",
+    "chunkName": "pages/home-fashion-six"
   },
   {
     "name": "home-fashion-three",
     "path": "/home-fashion-three",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\home-fashion-three.vue",
-    "chunkName": "pages/home-fashion-three",
-    "_name": "_47976c17"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\home-fashion-three.vue",
+    "chunkName": "pages/home-fashion-three"
   },
   {
     "name": "home-fashion-two",
     "path": "/home-fashion-two",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\home-fashion-two.vue",
-    "chunkName": "pages/home-fashion-two",
-    "_name": "_2f3673f6"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\home-fashion-two.vue",
+    "chunkName": "pages/home-fashion-two"
   },
   {
     "name": "login-register",
     "path": "/login-register",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\login-register.vue",
-    "chunkName": "pages/login-register",
-    "_name": "_635e607a"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\login-register.vue",
+    "chunkName": "pages/login-register"
   },
   {
     "name": "my-account",
     "path": "/my-account",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\my-account.vue",
-    "chunkName": "pages/my-account",
-    "_name": "_79a1bdc8"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\my-account.vue",
+    "chunkName": "pages/my-account"
   },
   {
     "name": "pack",
     "path": "/pack",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\pack.vue",
-    "chunkName": "pages/pack",
-    "_name": "_fd59a556"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\pack.vue",
+    "chunkName": "pages/pack"
   },
   {
     "name": "packdetail",
     "path": "/packdetail",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\packdetail.vue",
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\packdetail.vue",
     "chunkName": "pages/packdetail",
     "children": [
       {
         "name": "packdetail-id",
         "path": ":id?",
-        "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\packdetail\\\\_id.vue",
-        "chunkName": "pages/packdetail/_id",
-        "_name": "_44a0cbc4"
+        "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\packdetail\\\\_id.vue",
+        "chunkName": "pages/packdetail/_id"
       }
-    ],
-    "_name": "_2c9cf366"
+    ]
   },
   {
     "name": "privacy-policy",
     "path": "/privacy-policy",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\privacy-policy.vue",
-    "chunkName": "pages/privacy-policy",
-    "_name": "_dda33b5a"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\privacy-policy.vue",
+    "chunkName": "pages/privacy-policy"
   },
   {
     "name": "shop",
     "path": "/shop",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\shop.vue",
-    "chunkName": "pages/shop",
-    "_name": "_4002efb2"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\shop.vue",
+    "chunkName": "pages/shop"
   },
   {
     "name": "shop-grid-full-width",
     "path": "/shop-grid-full-width",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\shop-grid-full-width.vue",
-    "chunkName": "pages/shop-grid-full-width",
-    "_name": "_e2965e58"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\shop-grid-full-width.vue",
+    "chunkName": "pages/shop-grid-full-width"
   },
   {
     "name": "shop-grid-no-sidebar",
     "path": "/shop-grid-no-sidebar",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\shop-grid-no-sidebar.vue",
-    "chunkName": "pages/shop-grid-no-sidebar",
-    "_name": "_4b0c1b1c"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\shop-grid-no-sidebar.vue",
+    "chunkName": "pages/shop-grid-no-sidebar"
   },
   {
     "name": "shop-grid-right-sidebar",
     "path": "/shop-grid-right-sidebar",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\shop-grid-right-sidebar.vue",
-    "chunkName": "pages/shop-grid-right-sidebar",
-    "_name": "_7236d80f"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\shop-grid-right-sidebar.vue",
+    "chunkName": "pages/shop-grid-right-sidebar"
   },
   {
     "name": "shop-grid-two-column",
     "path": "/shop-grid-two-column",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\shop-grid-two-column.vue",
-    "chunkName": "pages/shop-grid-two-column",
-    "_name": "_65595b7a"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\shop-grid-two-column.vue",
+    "chunkName": "pages/shop-grid-two-column"
   },
   {
     "name": "shop-list-full-width",
     "path": "/shop-list-full-width",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\shop-list-full-width.vue",
-    "chunkName": "pages/shop-list-full-width",
-    "_name": "_2caf5f08"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\shop-list-full-width.vue",
+    "chunkName": "pages/shop-list-full-width"
   },
   {
     "name": "shop-list-standard",
     "path": "/shop-list-standard",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\shop-list-standard.vue",
-    "chunkName": "pages/shop-list-standard",
-    "_name": "_9c85d29e"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\shop-list-standard.vue",
+    "chunkName": "pages/shop-list-standard"
   },
   {
     "name": "terms-conditions",
     "path": "/terms-conditions",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\terms-conditions.vue",
-    "chunkName": "pages/terms-conditions",
-    "_name": "_13eb497a"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\terms-conditions.vue",
+    "chunkName": "pages/terms-conditions"
   },
   {
     "name": "wishlist",
     "path": "/wishlist",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\wishlist.vue",
-    "chunkName": "pages/wishlist",
-    "_name": "_0c74cdfe"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\wishlist.vue",
+    "chunkName": "pages/wishlist"
   },
   {
     "name": "blog-blog-right-sidebar",
     "path": "/blog/blog-right-sidebar",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\blog\\\\blog-right-sidebar.vue",
-    "chunkName": "pages/blog/blog-right-sidebar",
-    "_name": "_f9f526c4"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\blog\\\\blog-right-sidebar.vue",
+    "chunkName": "pages/blog/blog-right-sidebar"
   },
   {
     "name": "blog-blog-without-sidebar",
     "path": "/blog/blog-without-sidebar",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\blog\\\\blog-without-sidebar.vue",
-    "chunkName": "pages/blog/blog-without-sidebar",
-    "_name": "_352dbe8a"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\blog\\\\blog-without-sidebar.vue",
+    "chunkName": "pages/blog/blog-without-sidebar"
   },
   {
     "name": "product-product-affiliate",
     "path": "/product/product-affiliate",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\product\\\\product-affiliate.vue",
-    "chunkName": "pages/product/product-affiliate",
-    "_name": "_6333e448"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\product\\\\product-affiliate.vue",
+    "chunkName": "pages/product/product-affiliate"
   },
   {
     "name": "blog-slug",
     "path": "/blog/:slug",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\blog\\\\_slug.vue",
-    "chunkName": "pages/blog/_slug",
-    "_name": "_4f1541c8"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\blog\\\\_slug.vue",
+    "chunkName": "pages/blog/_slug"
   },
   {
     "name": "product-slug",
     "path": "/product/:slug?",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\product\\\\_slug.vue",
-    "chunkName": "pages/product/_slug",
-    "_name": "_d0d5a512"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\product\\\\_slug.vue",
+    "chunkName": "pages/product/_slug"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\greensolutions\\\\Desktop\\\\Personal\\\\Projects\\\\Iptv-Ecommerce\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_103df9c6"
+    "component": "D:\\\\Iptv-Ecommerce\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
   }
 ]

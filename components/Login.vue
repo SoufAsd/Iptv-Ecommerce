@@ -86,6 +86,7 @@ export default {
         },
       };
       await this.$auth.loginWith('local', { data: prod })
+    
     },
     handleCredentialResponse(response) {
       console.log(response);

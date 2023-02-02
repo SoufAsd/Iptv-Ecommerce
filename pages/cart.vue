@@ -53,7 +53,7 @@
                             <div class="col-lg-12">
                                 <div class="cart-shiping-update-wrapper">
                                     <div class="cart-shiping-update">
-                                        <n-link to="/shop">Continue Shopping</n-link>
+                                        <n-link to="/pack">Continue Shopping</n-link>
                                     </div>
                                     <div class="cart-clear">
                                         <button @click="clearCart()">Clear Shopping Cart</button>
