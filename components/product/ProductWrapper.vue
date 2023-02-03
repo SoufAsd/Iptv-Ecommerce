@@ -10,7 +10,7 @@
                             <div class="product-wrap mb-30" data-aos="fade-left">
                                         <div class="product-img" >
                                             <nuxt-link :to="`/packdetail/${pack.id}` " >
-                                                <span @click="updateSelectedPack(pack)">
+                                                <span >
                                                     <img class="default-img" :src="baseURL+pack.image" :alt="pack.name">
                                                     <img class="hover-img" :src="baseURL+pack.image" :alt="pack.name">
                                                 </span>
@@ -41,7 +41,7 @@
                                         <div class="product-content text-center">
                                             <h3>
                                                 <nuxt-link :to="`/packdetail/${pack.id}` " >
-                                                <span @click="updateSelectedPack(pack)">{{ pack.name }}
+                                                <span >{{ pack.name }}
                                                 </span>
                                                 </nuxt-link>
                                             </h3>
