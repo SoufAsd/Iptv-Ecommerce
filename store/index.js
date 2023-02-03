@@ -112,15 +112,16 @@ export const mutations = {
         return state.selectedPack=pack
     },
     UPDATE_CART(state, payload) {
+       
         const item = state.cart.find(el => payload.id === el.id)
         const login_user =  this.$auth.$storage.state.loggedIn
         
         if(login_user){
+            state.token= this.$auth.strategy.token.get().split('Bearer ')[1]
               if(state.cart.length>0){
+                state.Quantity=payload.cartQuantity
                 if(item){
                     state.Quantity = item.cartQuantity + payload.cartQuantity
-                }else{
-                    state.Quantity=payload.cartQuantity
                 }
                 const data_req ={
                     'token':state.token,
@@ -171,6 +172,15 @@ export const mutations = {
     },
 
     CLEAR_CART(state) {
+        const login_user =  this.$auth.$storage.state.loggedIn
+        if(login_user){
+            state.token= this.$auth.strategy.token.get().split('Bearer ')[1]
+            const data_req ={
+                'token':state.token,
+            }
+          
+           this.$axios.$post('api/delete_commande',data_req)
+        }
         state.cart = []
     },
 
@@ -207,7 +217,8 @@ export const mutations = {
         this.$auth.$storage.setState('loggedIn', true)
      },
     LOGIN(state, data) {
-        state.token=data.accessToken
+       
+        
         this.$auth.$storage.setState('loggedIn', true)
      },
 }

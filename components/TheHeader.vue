@@ -39,14 +39,14 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="same-style header-compare">
+                            <!-- <div class="same-style header-compare">
                                 <n-link to="/compare"><i class="pe-7s-shuffle"></i></n-link>
                                 <span class="count-style">{{ compareItemCount }}</span>
-                            </div>
-                            <div class="same-style header-wishlist">
+                            </div> -->
+                            <!-- <div class="same-style header-wishlist">
                                 <n-link to="/wishlist"><i class="pe-7s-like"></i></n-link>
                                 <span class="count-style">{{ wishlistItemCount }}</span>
-                            </div>
+                            </div> -->
                             <div class="same-style cart-wrap">
                                 <button class="icon-cart" @click="openCart = !openCart">
                                     <i class="pe-7s-shopbag"></i>

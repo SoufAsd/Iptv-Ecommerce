@@ -75,6 +75,12 @@
                     price: 777.77,
                     description: "leg lamp from that one movie",
                     img: "./assets/lamp.jpg"
+                },
+                facture:{
+                    total : '',
+                    email : '',
+                    id_payment : '',
+                    token:''
                 }
             }
         },
@@ -82,6 +88,7 @@
             HeaderWithTopbar: () => import("@/components/HeaderWithTopbar"),
             Breadcrumb: () => import("@/components/Breadcrumb"),
             TheFooter: () => import("@/components/TheFooter"),
+          
         },
         mounted(){
             const script = document.createElement("script");
@@ -111,7 +118,17 @@
                     onApprove: async (data, actions) => {
                         const order = await actions.order.capture();
                         this.paidFor = true;
-                        console.log(order);
+                        this.facture.total=this.total
+                        this.facture.email=order.payer.email_address
+                        this.facture.id_payment=order.id
+                        this.facture.token = this.$auth.strategy.token.get().split('Bearer ')[1]
+                        
+                        await  this.$axios.post('api/createOrder',this.facture)
+                        .then (response =>{
+                            this.$store.commit('CLEAR_CART')
+                            this.$notify({ title: 'Transaction completed' })
+                            this.$router.push({path: '/'});
+                        });
                     },
                     onError: err => {
                        
