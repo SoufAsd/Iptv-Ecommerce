@@ -15,7 +15,7 @@
           rules="required|email"
           v-slot="{ errors }"
         >
-        <span>{{ errors[0] }}</span>
+          <span>{{ errors[0] }}</span>
           <input
             type="email"
             v-model="email"
@@ -28,14 +28,14 @@
           rules="required|alpha_dash|min:6"
           v-slot="{ errors }"
         >
-        <span>{{ errors[0] }}</span>
-        <input
-          type="password"
-          v-model="password"
-          name="password"
-          placeholder="Password"
-        />
-      </ValidationProvider>
+          <span>{{ errors[0] }}</span>
+          <input
+            type="password"
+            v-model="password"
+            name="password"
+            placeholder="Password"
+          />
+        </ValidationProvider>
         <div class="button-box">
           <div class="login-toggle-btn">
             <input type="checkbox" />
@@ -50,17 +50,18 @@
   </div>
 </template>
 <script>
+import Vue from "vue";
 import { ValidationProvider, ValidationObserver } from "vee-validate";
 import * as rules from "vee-validate/dist/rules";
-import { extend } from 'vee-validate';
-import { required } from 'vee-validate/dist/rules';
+import { extend } from "vee-validate";
+import { required } from "vee-validate/dist/rules";
 
 export default {
   components: {
     ValidationProvider,
     ValidationObserver,
     rules,
-    required
+    required,
   },
   data() {
     return {
@@ -71,7 +72,7 @@ export default {
     };
   },
   methods: {
-    loginWithGoogle(){
+    loginWithGoogle() {
       this.$auth.loginWith("google", { params: { prompt: "select_account" } });
     },
     async onSubmit() {
@@ -85,8 +86,15 @@ export default {
           "Content-Type": "application/vnd.api+json",
         },
       };
-      await this.$auth.loginWith('local', { data: prod })
-    
+      await this.$auth.loginWith("local", { data: prod }).
+      then((data) => {this.$store.dispatch("updatePanier", {data});}).catch((error) => {
+        Vue.notify({
+          group: "foo",
+          title: error.response.data.message,
+          text: "Email or Password incorrect!",
+          type: "error",
+        });
+      });
     },
     handleCredentialResponse(response) {
       console.log(response);
