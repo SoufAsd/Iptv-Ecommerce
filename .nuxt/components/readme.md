@@ -57,6 +57,7 @@ You can directly use them in pages and other components without the need to impo
 - `<PolicyServicePolicyFour>` | `<policy-service-policy-four>` (components/policy/ServicePolicyFour.vue)
 - `<PolicyServicePolicyThree>` | `<policy-service-policy-three>` (components/policy/ServicePolicyThree.vue)
 - `<PolicyServicePolicyTwo>` | `<policy-service-policy-two>` (components/policy/ServicePolicyTwo.vue)
+- `<PolicyTableFlipping>` | `<policy-table-flipping>` (components/policy/TableFlipping.vue)
 - `<ProductDetailsWrapper>` | `<product-details-wrapper>` (components/product/ProductDetailsWrapper.vue)
 - `<ProductGridItem>` | `<product-grid-item>` (components/product/ProductGridItem.vue)
 - `<ProductGridItemTwo>` | `<product-grid-item-two>` (components/product/ProductGridItemTwo.vue)

@@ -1,5 +1,5 @@
 <template>
-    <div class="product-area bg-gray pt-20 pb-90">
+    <div class="product-area pt-10 pb-90">
         <div class="container">
             <SectionTitleWithSubTitle title=" NOS PACKS!" classes="section-title"  />
 

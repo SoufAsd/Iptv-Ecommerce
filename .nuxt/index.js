@@ -15,6 +15,7 @@ import { createStore } from './store.js'
 
 import nuxt_plugin_plugin_d6474a0e from 'nuxt_plugin_plugin_d6474a0e' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_axios_6251bc9c from 'nuxt_plugin_axios_6251bc9c' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_gsapModule_297e5235 from 'nuxt_plugin_gsapModule_297e5235' // Source: .\\gsapModule.js (mode: 'all')
 import nuxt_plugin_vueawesomeswiper_5ce03f58 from 'nuxt_plugin_vueawesomeswiper_5ce03f58' // Source: ..\\plugins\\vue-awesome-swiper.js (mode: 'all')
 import nuxt_plugin_vuejspagiante_7edc93b2 from 'nuxt_plugin_vuejspagiante_7edc93b2' // Source: ..\\plugins\\vuejs-pagiante.js (mode: 'all')
 import nuxt_plugin_observevisibility_b986de04 from 'nuxt_plugin_observevisibility_b986de04' // Source: ..\\plugins\\observe-visibility.js (mode: 'all')
@@ -226,6 +227,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_axios_6251bc9c === 'function') {
     await nuxt_plugin_axios_6251bc9c(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_gsapModule_297e5235 === 'function') {
+    await nuxt_plugin_gsapModule_297e5235(app.context, inject)
   }
 
   if (typeof nuxt_plugin_vueawesomeswiper_5ce03f58 === 'function') {

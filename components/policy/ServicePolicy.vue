@@ -1,10 +1,10 @@
 <template>
-    <div class="support-area pt-20 pb-90 pl-70">
+    <div class="support-area pt-20">
         <div class="container">
             <div class="row">
-                <div class="global col-lg-4 col-sm-6 mt-30" v-for="(policy, index) in policies" :key="index">
+                <div class="global col-lg-4 col-sm-6 " v-for="(policy, index) in policies" :key="index">
                     <div class="card"  data-aos="flip-right" >
-                        <div class="face face1">
+                        <div class="face face1" v-bind:class = "(policy.change)?'change':''" >
                             <div class="content">
                                 <img :src="policy.icon" :alt="policy.title">
                                 <h3>{{ policy.title }}</h3>
@@ -30,17 +30,20 @@
                     {
                         icon: "/img/icon-img/wifi.png",
                         title: "4K/FHD/HD/SD Quality",
-                        subTitle: "La plupart de nos chaînes de télévision sont disponibles en qualité HD et certaines d'entre elles sont en 4K"
+                        subTitle: "La plupart de nos chaînes de télévision sont disponibles en qualité HD et certaines d'entre elles sont en 4K",
+                        change:false
                     },
                     {
                         icon: "/img/icon-img/support-2.png",
                         title: "Support 24/7",
-                        subTitle: "Support 24 hours a day"
+                        subTitle: "Support 24 hours a day",
+                        change:true
                     },
                     {
                         icon: "/img/icon-img/support-3.png",
                         title: "Encrypted",
-                        subTitle: "Paiements sécurisés - Aucun processus de facturation compliqué requis"
+                        subTitle: "Paiements sécurisés - Aucun processus de facturation compliqué requis",
+                        change:false
                     },
                 ]
             }
@@ -49,31 +52,43 @@
 </script>
 
 <style>
-    .global .card{
+.global {
+    display: flex;
+    justify-content: center;
+}
+.card.aos-animate.aos-init {
+    background-color: transparent;
+}
+.global .card{
         position: relative;
         cursor: pointer;
         border: none;
         
-    }
+}
     
-    .global .card .face{
-       
+ .global .card .face{
+    
         width: 300px;
         height: 200px;
         transition: 0.5s;
+}
+.global .card .face.face1.change{
+    background: rgb(34, 200, 229);
+}
+.global .card:hover .face.face1.change{
+        background: #650979
     }
-
-    .global .card .face.face1{
+.global .card .face.face1{
         
         position: relative;
-        background: #d72ae5;
+        background: #650979;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 5px;
         z-index: 1;
         transform: translateY(100px);
-    }
+}
 
     .global .card:hover .face.face1{
         background: rgb(34, 200, 229);

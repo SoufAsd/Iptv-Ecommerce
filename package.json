@@ -18,7 +18,6 @@
         "bootstrap": "^5.1.0",
         "core-js": "^3.27.2",
         "nuxt": "^2.15.8",
-        "nuxt-gsap-module": "^1.7.2",
         "regenerator-runtime": "^0.13.11",
         "swiper": "^5.3.7",
         "vee-validate": "^3.4.14",
@@ -36,6 +35,7 @@
     },
     "devDependencies": {
         "node": "^16.0.0",
+        "nuxt-gsap-module": "^1.7.2",
         "sass": "^1.34.0",
         "sass-loader": "^10.1.1",
         "webpack": "^4.46.0"

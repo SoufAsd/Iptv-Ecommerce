@@ -152,6 +152,9 @@
   "PolicyServicePolicyTwo": {
     "description": "Auto imported from components/policy/ServicePolicyTwo.vue"
   },
+  "PolicyTableFlipping": {
+    "description": "Auto imported from components/policy/TableFlipping.vue"
+  },
   "ProductDetailsWrapper": {
     "description": "Auto imported from components/product/ProductDetailsWrapper.vue"
   },

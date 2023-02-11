@@ -1,5 +1,5 @@
 <template>
-    <div class="support-area bg-gray pt-60 pb-60">
+    <div class="support-area  pt-60 pb-60">
         <div class="container">
             <div class="row chain-bg">
                 <div class="rs-zone">
@@ -9,21 +9,6 @@
                     <p class="text-desc">
                         NB: POUR REGARDER LES CHAINES EN FULL HD UN DÉBIT DE CONNEXION DE 8MB/S OU PLUS EST RECOMMANDÉE
                     </p>
-                </div>
-                <div class="rs-group-warap">
-                    <div class="rs-group">
-                        <div class="rs-parallax-wrap">
-                            <div class="rs-layer-video">
-                                <div class="html5vid rs_html5vidbasicstyles hidefullscreen">
-                                    <iframe autoplay="true" src="https://www.sliderrevolution.com/wp-content/uploads/2020/06/particle_video.mp4?autoplay=1&loop=1"  style="object-fit: cover; background-size: cover; opacity: 1; width: 320px; height: 180px; display: block;" frameborder="0"></iframe>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div style="position: absolute; display: block; pointer-events: auto; left: 245px; top: 188px; z-index: 19; visibility: visible;">
-                            <div class="slider"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

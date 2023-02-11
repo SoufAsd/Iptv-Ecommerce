@@ -2,10 +2,11 @@
     <div class="home-page-wrapper">
         <TheHeader />
         <HeroSlider />
+        <PolicyTableFlipping />
         <PolicyServicePolicy />
-        <ChainnesChaineInfo />
-        <DealWithCountdown />
         <ProductWrapper :packs="$store.state.pack"  />
+        <BrandLogoCarousel />
+        <FunFact/>
         <TheFooter />
     </div>
 </template>

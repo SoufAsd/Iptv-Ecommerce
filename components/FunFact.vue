@@ -1,5 +1,5 @@
 <template>
-    <div class="funfact-area bg-gray-3 pt-100 pb-70">
+    <div class="funfact-area  pt-100 pb-70">
         <div class="container">
             <div class="row" v-observe-visibility="{callback: visibilityChanged, once: true}">
                 <div class="col-lg-3 col-sm-6" v-for="(item, index) in funFacts" :key="index">

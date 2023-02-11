@@ -60,15 +60,15 @@
 	display: flex;
 	align-items: flex-end;
     .slider-content {
-        padding: 183px 0 0;
+        padding:  0 0 200px;
         @media #{$xl-layout}{
-            padding: 80px 0 0;
+            padding:  0 0 80px;
         }
         @media #{$lg-layout}{
-            padding: 45px 0 0;
+            padding:  0 0 100px;
         }
         @media #{$md-layout}{
-            padding: 0px 0 0;
+            padding: 0px 0 20px;
         }
         @media #{$xs-layout}{
             padding: 0px 0 40px;
