@@ -341,7 +341,7 @@ li.active {
     width: 100%;
   }
   .card-photo {
-    max-width: 100%;
+    max-width: 82%;
     order: 1;
   }
 
@@ -368,7 +368,7 @@ li.active {
     margin-right: 0;
   }
   .card-info h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 </style>

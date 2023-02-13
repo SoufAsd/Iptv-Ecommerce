@@ -8,7 +8,6 @@
             <div class="container">
                 <div class="row flex-row-reverse">
                     <div class="col-lg-9">
-                        <!-- shop top bar -->
                         <div class="shop-top-bar">
                             <div class="select-showing-wrap">
                                 <div class="shop-select">
@@ -32,9 +31,6 @@
                                 </button>
                             </div>
                         </div>
-                        <!-- end shop top bar -->
-
-                        <!-- shop product -->
                         <div class="shop-bottom-area mt-35">
                             <div class="row product-layout"  :class="{ 'list': layout === 'list', 'grid three-column': layout === 'threeColumn', 'grid two-column': layout === 'twoColumn' }" >
                                 <div class="col-xl-4 col-sm-6" v-for="pack in $store.state.pack" :key="pack.id">
@@ -116,7 +112,6 @@
                                 </div>      
                             </div>
                         </div>
-                        <!-- end shop product -->
 
                         <div v-if="getPaginateCount > 1">
                             <pagination class="pro-pagination-style shop-pagination mt-30" v-model="currentPage" :per-page="perPage" :records="filterItems.length" @paginate="paginateClickCallback" :page-count="getPaginateCount" />
@@ -124,7 +119,7 @@
                     </div>
 
                     <div class="col-lg-3">
-                        <ShopSidebar classes="mr-30" />
+                        <!-- <ShopSidebar classes="mr-30" /> -->
                     </div>
                 </div>
             </div>

@@ -12,10 +12,10 @@
         }
     }
     p {
-        color: $dark;
+        color: $white;
         letter-spacing: .9px;
         a {
-            color: $dark;
+            color: $white;
             &:hover {
                 color: $theme-color;
             }
@@ -39,7 +39,7 @@
         h3{
             font-size: 16px;
             font-weight: 500;
-            color: $dark;
+            color: $white;
             margin: 0 0 16px;
             line-height: 1;
         }
@@ -52,7 +52,7 @@
                    margin: 0 0 0px; 
                 }
                 a {
-                    color: #5d5d5d;
+                    color: $white;
                     letter-spacing: .3px;
                     &:hover {
                         color: $theme-color;
@@ -82,7 +82,7 @@
     }
     .subscribe-style {
         p {
-            color: #7a7a7a;
+            color: $white;
             margin: 0 0 20px;
         }
         .subscribe-form {
@@ -90,7 +90,7 @@
                 input {
                     background: transparent;
                     font-size: 13px;
-                    color: $dark;
+                    color: $white;
                     border: none;
                     border-bottom: 2px solid #ebebeb;
                     padding: 2px 10px 2px 0;
@@ -98,7 +98,7 @@
                 .button {
                     width: auto;
                     height: auto;
-                    color: $dark;
+                    color: $white;
                     font-size: 14px;
                     padding: 0 0 1px;
                     line-height: 1;
@@ -114,12 +114,12 @@
         }
         &.subscribe-style-white {
             p {
-                color: #e6e6e6;
+                color: $white;
             }
             .subscribe-form {
                 form {
                     input {
-                        color: #a4a4a4;
+                        color: $white;
                         border-bottom: 2px solid #ebebeb;
                     }
                     .clear {

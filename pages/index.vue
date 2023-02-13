@@ -32,7 +32,7 @@
         },
     };
 </script>
-<style>
+<style >
 .section-title h2 {
     color: #f7345e;
     transform: skewX(-10deg);
@@ -42,6 +42,18 @@
     font-weight: 700;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 500px) {
+    .section-title h2 {
+        font-size: 1.8em !important;
+    }
+}
+@media only screen and (max-device-width: 767px) and (min-device-width: 500px)
+{
+    .section-title h2 {
+    font-size: 2.2em !important;
+    }
 }
 </style>
 

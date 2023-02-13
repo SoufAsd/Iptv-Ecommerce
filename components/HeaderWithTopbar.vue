@@ -48,7 +48,7 @@
                         </div>
                         <div class="col-lg-2 col-md-6 col-8">
                             <div class="header-right-wrap">
-                                <div class="same-style header-search d-none d-lg-block">
+                                <!-- <div class="same-style header-search d-none d-lg-block">
                                     <button class="search-active" @click="isOpenSearch = !isOpenSearch"><i class="pe-7s-search"></i></button>
                                     <div class="search-content" :class="{ active:isOpenSearch }">
                                         <form>
@@ -56,7 +56,7 @@
                                             <button class="button-search"><i class="pe-7s-search"></i></button>
                                         </form>
                                     </div> 
-                                </div>
+                                </div> -->
                                 <div class="same-style account-setting d-none d-lg-block">
                                     <button class="account-setting-active" @click="isOpenAccountSettings = !isOpenAccountSettings"><i class="pe-7s-user-female"></i></button>
                                     <div class="account-dropdown" :class="{ active:isOpenAccountSettings }">
@@ -68,14 +68,14 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="same-style header-compare">
+                                <!-- <div class="same-style header-compare">
                                     <n-link to="/compare"><i class="pe-7s-shuffle"></i></n-link>
                                     <span class="count-style">{{ compareItemCount }}</span>
                                 </div>
                                 <div class="same-style header-wishlist">
                                     <n-link to="/wishlist"><i class="pe-7s-like"></i></n-link>
                                     <span class="count-style">{{ wishlistItemCount }}</span>
-                                </div>
+                                </div> -->
                                 <div class="same-style cart-wrap">
                                     <button class="icon-cart" @click="openCart = !openCart">
                                         <i class="pe-7s-shopbag"></i>
