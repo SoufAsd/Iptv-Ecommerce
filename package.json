@@ -1,7 +1,7 @@
 {
-    "name": "flone",
+    "name": "iptv",
     "version": "1.0.0",
-    "author": "Uzzal",
+    "author": "Souf",
     "private": true,
     "scripts": {
         "dev": "nuxt",
